@@ -5228,11 +5228,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2010,
@@ -10451,11 +10451,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2015,
@@ -15674,11 +15674,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2020,
@@ -20897,11 +20897,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2025,
@@ -26120,11 +26120,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2030,
@@ -31343,11 +31343,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2035,
@@ -36566,11 +36566,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2040,
@@ -41789,11 +41789,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2045,
@@ -47012,11 +47012,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2050,
@@ -52235,11 +52235,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2055,
@@ -57458,11 +57458,11 @@
       ],
       "sectors": [
         "12_total_final_consumption",
-        "net_imports",
-        "18_electricity_output_in_gwh",
         "02_imports",
         "09_total_transformation_sector",
         "03_exports",
+        "net_imports",
+        "18_electricity_output_in_gwh",
         "07_total_primary_energy_supply"
       ],
       "year": 2060,
