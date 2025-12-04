@@ -13,6 +13,7 @@ import {
   netImports,
   netImportsByFuel,
   formatEnergy,
+  sanitizeEconomyName,
   FuelValue,
 } from "../domain/energy";
 import { useEnergyDataset } from "../hooks/useEnergyDataset";
@@ -45,6 +46,14 @@ function getDayString() {
   return DateTime.now().toFormat("yyyy-MM-dd");
 }
 
+function computeGuessMetrics(profile: EnergyProfile) {
+  const tfc = sectorTotal(profile, "12_total_final_consumption");
+  const tpes = sectorTotal(profile, "07_total_primary_energy_supply");
+  const elecGen = sectorTotal(profile, "18_electricity_output_in_gwh");
+  const netImportsValue = netImports(profile);
+  return { tfc, tpes, elecGen, netImports: netImportsValue };
+}
+
 interface EnergyGameProps {
   settingsData: SettingsData;
 }
@@ -66,6 +75,25 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       setTargetProfile(chooseProfile(dataset, dayString));
     }
   }, [dataset, dayString]);
+
+  const profileLookup = useMemo(() => {
+    if (!dataset) return new Map<string, EnergyProfile>();
+    const map = new Map<string, EnergyProfile>();
+    dataset.profiles.forEach((profile) => {
+      map.set(sanitizeEconomyName(profile.name), profile);
+    });
+    return map;
+  }, [dataset]);
+
+  const displayGuesses = useMemo(() => {
+    if (!dataset) return guesses;
+    return guesses.map((guess) => {
+      const profile = profileLookup.get(sanitizeEconomyName(guess.name));
+      if (!profile) return guess;
+      const metrics = computeGuessMetrics(profile);
+      return { ...guess, ...metrics, name: profile.name };
+    });
+  }, [dataset, guesses, profileLookup]);
 
   const gameEnded =
     guesses.length === MAX_TRY_COUNT ||
@@ -92,21 +120,13 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
 
     const guessedTotal = totalEnergy(guessedProfile);
     const totalDiff = Math.abs(guessedTotal - targetTotal);
-    const proximity = proximityFromDistance(totalDiff, totalRange);
+    const isExactMatch =
+      sanitizeEconomyName(guessedProfile.name) ===
+      sanitizeEconomyName(targetProfile.name);
+    const proximityRaw = proximityFromDistance(totalDiff, totalRange);
+    const proximity = isExactMatch ? 100 : Math.min(proximityRaw, 99);
 
-    const guessedTPES = sectorTotal(
-      guessedProfile,
-      "07_total_primary_energy_supply"
-    );
-    const guessedTFC = sectorTotal(
-      guessedProfile,
-      "12_total_final_consumption"
-    );
-    const guessedElecGen = sectorTotal(
-      guessedProfile,
-      "18_electricity_output_in_gwh"
-    );
-    const guessedNetImports = netImports(guessedProfile);
+    const guessedMetrics = computeGuessMetrics(guessedProfile);
 
     const newGuess: EnergyGuess = {
       name: guessedProfile.name,
@@ -114,10 +134,10 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       proximity,
       total: guessedTotal,
       totalProximity: proximity,
-      tpes: guessedTPES,
-      tfc: guessedTFC,
-      elecGen: guessedElecGen,
-      netImports: guessedNetImports,
+      tpes: guessedMetrics.tpes,
+      tfc: guessedMetrics.tfc,
+      elecGen: guessedMetrics.elecGen,
+      netImports: guessedMetrics.netImports,
     };
 
     addGuess(newGuess);
@@ -361,11 +381,11 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
           </div>
         ))}
       </div>
-      <EnergyGuesses rowCount={MAX_TRY_COUNT} guesses={guesses} />
+      <EnergyGuesses rowCount={MAX_TRY_COUNT} guesses={displayGuesses} />
       <div className="my-2">
         {gameEnded ? (
           <EnergyShare
-            guesses={guesses}
+            guesses={displayGuesses}
             dayString={dayString}
             theme={settingsData.theme}
           />
