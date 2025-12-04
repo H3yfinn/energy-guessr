@@ -56,4 +56,4 @@ Notes:
 
 ## Credits & License
 
-Energy Guessr is a fork of Worldle by teuteuf (MIT) – original repo: https://github.com/teuteuf/worldle. Changes © 2025 finn.
+Energy Guessr is a fork of Worldle by markgalassi (MIT) – original repo: https://github.com/markgalassi/worldle. Changes © 2025 finn.
