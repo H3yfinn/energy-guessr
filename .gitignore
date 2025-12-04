@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# large local source data (kept out of git)
+merged_file_energy_ALL_*.csv

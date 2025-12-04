@@ -1,38 +1,29 @@
 import { t } from "i18next";
 import React, { useState } from "react";
 import Autosuggest from "react-autosuggest";
-import { useTranslation } from "react-i18next";
-import {
-  countries,
-  getCountryName,
-  sanitizeCountryName,
-} from "../domain/countries";
+import { sanitizeEconomyName } from "../domain/energy";
 
-interface CountryInputProps {
+interface EnergyInputProps {
   currentGuess: string;
   setCurrentGuess: (guess: string) => void;
+  options: string[];
 }
 
-export function CountryInput({
+export function EnergyInput({
   currentGuess,
   setCurrentGuess,
-}: CountryInputProps) {
+  options,
+}: EnergyInputProps) {
   const [suggestions, setSuggestions] = useState<string[]>([]);
-
-  const { i18n } = useTranslation();
 
   return (
     <Autosuggest
       suggestions={suggestions}
       onSuggestionsFetchRequested={({ value }) =>
         setSuggestions(
-          countries
-            .map((c) => getCountryName(i18n.resolvedLanguage, c).toUpperCase())
-            .filter((countryName) =>
-              sanitizeCountryName(countryName).includes(
-                sanitizeCountryName(value)
-              )
-            )
+          options.filter((name) =>
+            sanitizeEconomyName(name).includes(sanitizeEconomyName(value))
+          )
         )
       }
       onSuggestionsClearRequested={() => setSuggestions([])}

@@ -1,20 +1,12 @@
+import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Game } from "./components/Game";
-import React, { useEffect, useState } from "react";
-import { Infos } from "./components/panels/Infos";
-import { useTranslation } from "react-i18next";
-import { InfosFr } from "./components/panels/InfosFr";
-import { Settings } from "./components/panels/Settings";
+import { EnergyGame } from "./components/EnergyGame";
 import { useSettings } from "./hooks/useSettings";
-import { Worldle } from "./components/Worldle";
 
 function App() {
-  const { t, i18n } = useTranslation();
-
-  const [infoOpen, setInfoOpen] = useState(false);
-  const [settingsOpen, setSettingsOpen] = useState(false);
-
+  const { t } = useTranslation();
   const [settingsData, updateSettings] = useSettings();
 
   useEffect(() => {
@@ -24,6 +16,11 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [settingsData.theme]);
+
+  const toggleTheme = () =>
+    updateSettings({
+      theme: settingsData.theme === "dark" ? "light" : "dark",
+    });
 
   return (
     <>
@@ -35,58 +32,36 @@ function App() {
         autoClose={2000}
         bodyClassName="font-bold text-center"
       />
-      {i18n.resolvedLanguage === "fr" ? (
-        <InfosFr
-          isOpen={infoOpen}
-          close={() => setInfoOpen(false)}
-          settingsData={settingsData}
-        />
-      ) : (
-        <Infos
-          isOpen={infoOpen}
-          close={() => setInfoOpen(false)}
-          settingsData={settingsData}
-        />
-      )}
-      <Settings
-        isOpen={settingsOpen}
-        close={() => setSettingsOpen(false)}
-        settingsData={settingsData}
-        updateSettings={updateSettings}
-      />
-      <div className="flex justify-center flex-auto dark:bg-slate-900 dark:text-slate-50">
-        <div className="w-full max-w-lg flex flex-col">
-          <header className="border-b-2 border-gray-200 flex">
-            <button
-              className="mx-3 text-xl"
-              type="button"
-              onClick={() => setInfoOpen(true)}
-            >
-              ❔
-            </button>
-            <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Wor<span className="text-green-600">l</span>dle
-            </h1>
-            <button
-              className="mx-3 text-xl"
-              type="button"
-              onClick={() => setSettingsOpen(true)}
-            >
-              ⚙️
-            </button>
+      <div className="flex justify-center flex-auto dark:bg-slate-900 dark:text-slate-50 min-h-screen">
+        <div className="w-full max-w-7xl flex flex-col p-4">
+          <header className="border-b-2 border-gray-200 flex items-start justify-between pb-3">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-gray-500">
+                Energy balances
+              </p>
+              <h1 className="text-4xl font-bold tracking-wide">
+                Energy Guessr
+              </h1>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Guess the economy from its energy balance charts.
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-600 dark:text-gray-300">
+                {t("settings.theme")}
+              </span>
+              <button
+                className="border px-2 py-1 text-xs rounded hover:bg-gray-50 dark:hover:bg-slate-800"
+                type="button"
+                onClick={toggleTheme}
+              >
+                {settingsData.theme === "dark" ? "Dark" : "Light"}
+              </button>
+            </div>
           </header>
-          <Game settingsData={settingsData} />
-          <footer className="flex justify-center text-sm mt-8 mb-1">
-            ❤️ <Worldle />? -
-            <a
-              className="underline pl-1"
-              href="https://www.ko-fi.com/teuteuf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("buyMeACoffee")}
-            </a>
-          </footer>
+          <div className="mt-4">
+            <EnergyGame settingsData={settingsData} />
+          </div>
         </div>
       </div>
     </>
