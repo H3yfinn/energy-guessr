@@ -3,6 +3,7 @@ import chartMeta from "../config/chartMeta.json";
 import { EnergyProfile, SectorKey, formatEnergy } from "../domain/energy";
 import { computeCardSizing } from "../utils/cardSizing";
 
+type Theme = "light" | "dark";
 type FuelMeta = {
   key: string;
   color: string;
@@ -10,10 +11,14 @@ type FuelMeta = {
   hide_in_elec_gen?: boolean;
 };
 const fuelMeta: FuelMeta[] = chartMeta.fuels as FuelMeta[];
-const FUEL_COLORS = fuelMeta.reduce<Record<string, string>>((acc, f) => {
+const FUEL_COLORS_LIGHT = fuelMeta.reduce<Record<string, string>>((acc, f) => {
   acc[f.key] = f.color;
   return acc;
 }, {});
+const FUEL_COLORS_DARK: Record<string, string> = {
+  ...FUEL_COLORS_LIGHT,
+  coal: "#6b7280",
+};
 const FUEL_ORDER = fuelMeta.reduce<Record<string, number>>((acc, f) => {
   acc[f.key] = f.order;
   return acc;
@@ -38,6 +43,7 @@ interface EnergyChartProps {
   year: number;
   scenario: string;
   source?: "apec" | "world" | string;
+  theme: Theme;
 }
 
 const SECTOR_LABELS: Record<string, string> = {
@@ -54,8 +60,10 @@ export function EnergyChart({
   year,
   scenario,
   source,
+  theme,
 }: EnergyChartProps) {
   const [showImage, setShowImage] = useState(true);
+  const fuelColors = theme === "dark" ? FUEL_COLORS_DARK : FUEL_COLORS_LIGHT;
   const chartSectors = (
     sectors.length > 0 ? sectors : (Object.keys(profile.sectors) as SectorKey[])
   ).sort((a, b) => {
@@ -209,7 +217,7 @@ export function EnergyChart({
                     const heightPercent =
                       (Math.abs(numericValue) / range) * chartSpan;
                     const isPositive = numericValue >= 0;
-                    const color = FUEL_COLORS[item.fuel] ?? FUEL_COLORS.other;
+                    const color = fuelColors[item.fuel] ?? fuelColors.other;
                     const negativeBottom = Math.max(
                       0,
                       baselineScaled - heightPercent

@@ -585,6 +585,7 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
           year={dataset.year}
           scenario={dataset.scenario}
           source={datasetMode === "world" ? "world" : "apec"}
+          theme={settingsData.theme}
         />
       </div>
       <div
