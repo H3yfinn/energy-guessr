@@ -225,9 +225,9 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
     });
   }, [dataset, datasetMode, targetProfile, dayString]);
 
-  // Fun title change based on number of wrong guesses (world mode)
+  // Fun title change based on number of wrong guesses (any mode)
   useEffect(() => {
-    const wrongCount = wrongTiles.size;
+    const wrongCount = guesses.filter((g) => g.proximity !== 100).length;
     if (wrongCount >= 9) {
       document.title = "ENeGry geussr??";
       onTitleChange?.("ENeGry geussr??");
@@ -238,7 +238,7 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
       document.title = "Energy Guessr";
       onTitleChange?.("Energy Guessr");
     }
-  }, [wrongTiles, onTitleChange]);
+  }, [guesses, onTitleChange]);
 
   const profileLookup = useMemo(() => {
     if (!dataset) return new Map<string, EnergyProfile>();
