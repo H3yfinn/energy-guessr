@@ -46,6 +46,8 @@ const ALIAS_LABELS: Record<string, string> = {
   russia: "Russia",
   chinesetaipei: "Chinese Taipei",
 };
+const APEC_ECONOMIES_TEXT =
+  "Australia, Brunei Darussalam, Canada, Chile, China, Hong Kong (China), Indonesia, Japan, Republic of Korea, Malaysia, Mexico, New Zealand, Papua New Guinea, Peru, Philippines, Russian Federation, Singapore, Chinese Taipei, Thailand, United States, Viet Nam.";
 
 function prettyName(name: string): string {
   if (name === name.toUpperCase()) {
@@ -753,13 +755,7 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       {datasetMode === "apec" && (
         <div className="text-xs text-gray-600 dark:text-gray-300 mt-3">
           <strong>APEC economies:</strong>
-          <span>
-            {" "}
-            Australia, Brunei Darussalam, Canada, Chile, China, Hong Kong (China),
-            Indonesia, Japan, Republic of Korea, Malaysia, Mexico, New Zealand, Papua New
-            Guinea, Peru, Philippines, Russian Federation, Singapore, Chinese Taipei,
-            Thailand, United States, Viet Nam.
-          </span>
+          <span> {" " + APEC_ECONOMIES_TEXT}</span>
         </div>
       )}
       <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
