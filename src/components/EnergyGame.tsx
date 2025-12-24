@@ -423,6 +423,9 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
     return <p className="p-4 text-center">Loading energy balances...</p>;
   }
 
+  const setYearWithContext = (year: number) =>
+    setYear(year, datasetMode === "world" ? targetProfile?.economy : undefined);
+
   return (
     <div className="flex-grow flex flex-col mx-2">
       {error && (
@@ -446,14 +449,7 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
                           ? "bg-blue-100 text-blue-800 border-blue-300 dark:bg-slate-700 dark:text-blue-100 dark:border-blue-500"
                           : "bg-white text-gray-700 border-gray-200 dark:bg-slate-800 dark:text-gray-200 dark:border-slate-700"
                       }`}
-                      onClick={() => {
-                        setYear(
-                          y,
-                          datasetMode === "world"
-                            ? targetProfile?.economy
-                            : undefined
-                        );
-                      }}
+                      onClick={() => setYearWithContext(y)}
                     >
                       {y}
                     </button>
@@ -474,26 +470,26 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
                           ? curr
                           : prev
                       );
-                      setYear(
-                        closest,
-                        datasetMode === "world"
-                          ? targetProfile?.economy
-                          : undefined
-                      );
+                      setYearWithContext(closest);
                     }}
                   />
                   <span className="text-[11px] text-gray-500 flex items-center gap-1">
                     {years.map((y) => (
-                      <span key={y} className="flex items-center gap-1">
-                        {(selectedYear ?? dataset.year) === y ? (
-                          <span className="font-bold text-black dark:text-white">
-                            {y}
-                          </span>
-                        ) : (
-                          <span>{y}</span>
+                      <button
+                        key={y}
+                        type="button"
+                        className={`flex items-center gap-1 px-1 rounded transition ${
+                          (selectedYear ?? dataset.year) === y
+                            ? "font-semibold text-black dark:text-white"
+                            : "hover:text-black dark:hover:text-white"
+                        }`}
+                        onClick={() => setYearWithContext(y)}
+                      >
+                        <span>{y}</span>
+                        {y !== years[years.length - 1] && (
+                          <span className="pointer-events-none">•</span>
                         )}
-                        {y !== years[years.length - 1] && <span>•</span>}
-                      </span>
+                      </button>
                     ))}
                   </span>
                 </>
