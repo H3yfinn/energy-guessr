@@ -214,7 +214,14 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       a.economy.localeCompare(b.economy)
     );
     setTileOptions(combined);
-    setWrongTiles(new Set());
+    setWrongTiles((prev) => {
+      const allowed = new Set(combined.map((p) => p.economy));
+      const next = new Set<string>();
+      prev.forEach((econ) => {
+        if (allowed.has(econ)) next.add(econ);
+      });
+      return next;
+    });
   }, [dataset, datasetMode, targetProfile, dayString]);
 
   const profileLookup = useMemo(() => {
