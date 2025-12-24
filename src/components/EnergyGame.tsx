@@ -80,9 +80,10 @@ function computeGuessMetrics(profile: EnergyProfile) {
 
 interface EnergyGameProps {
   settingsData: SettingsData;
+  onTitleChange?: (title: string) => void;
 }
 
-export function EnergyGame({ settingsData }: EnergyGameProps) {
+export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
   const { t } = useTranslation();
   const dayString = useMemo(getDayString, []);
 
@@ -223,6 +224,21 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       return next;
     });
   }, [dataset, datasetMode, targetProfile, dayString]);
+
+  // Fun title change based on number of wrong guesses (world mode)
+  useEffect(() => {
+    const wrongCount = wrongTiles.size;
+    if (wrongCount >= 9) {
+      document.title = "ENeGry geussr??";
+      onTitleChange?.("ENeGry geussr??");
+    } else if (wrongCount >= 4) {
+      document.title = "Energy Guessr?";
+      onTitleChange?.("Energy Guessr?");
+    } else {
+      document.title = "Energy Guessr";
+      onTitleChange?.("Energy Guessr");
+    }
+  }, [wrongTiles, onTitleChange]);
 
   const profileLookup = useMemo(() => {
     if (!dataset) return new Map<string, EnergyProfile>();
