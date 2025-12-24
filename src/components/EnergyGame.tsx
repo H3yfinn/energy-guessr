@@ -66,13 +66,6 @@ type FuelMeta = {
   hide_in_elec_gen?: boolean;
 };
 const fuelMeta: FuelMeta[] = chartMeta.fuels as FuelMeta[];
-const FUEL_LEGEND_COLORS: Record<string, string> = fuelMeta.reduce(
-  (acc: Record<string, string>, f) => {
-    acc[f.key] = f.color;
-    return acc;
-  },
-  {}
-);
 
 function getDayString() {
   return DateTime.now().toFormat("yyyy-MM-dd");

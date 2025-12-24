@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { EnergyGame } from "./components/EnergyGame";
 import { useSettings } from "./hooks/useSettings";
 
 function App() {
-  const { t } = useTranslation();
-  const [settingsData, updateSettings] = useSettings();
+  const [settingsData] = useSettings();
 
   useEffect(() => {
     if (settingsData.theme === "dark") {
