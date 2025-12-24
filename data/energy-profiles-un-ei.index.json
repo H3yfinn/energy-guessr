@@ -1,0 +1,78 @@
+{
+  "years": [
+    2010,
+    2020
+  ],
+  "defaultYear": 2020,
+  "scenario": "UN (2010/2020) + EI electricity (2023)",
+  "year_groups": {
+    "2010": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-un-ei-2010-g0.json",
+        "economies": [
+          "01_AUS",
+          "03_CDA",
+          "05_PRC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "16_RUS",
+          "19_THA",
+          "20_USA",
+          "UN_276",
+          "UN_32",
+          "UN_356",
+          "UN_398",
+          "UN_528",
+          "UN_616",
+          "UN_682",
+          "UN_710",
+          "UN_724",
+          "UN_76",
+          "UN_784",
+          "UN_792",
+          "UN_804",
+          "UN_818",
+          "UN_826"
+        ]
+      }
+    ],
+    "2020": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-un-ei-2020-g0.json",
+        "economies": [
+          "01_AUS",
+          "03_CDA",
+          "05_PRC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "16_RUS",
+          "19_THA",
+          "20_USA",
+          "UN_276",
+          "UN_32",
+          "UN_356",
+          "UN_398",
+          "UN_528",
+          "UN_616",
+          "UN_682",
+          "UN_710",
+          "UN_724",
+          "UN_76",
+          "UN_784",
+          "UN_792",
+          "UN_804",
+          "UN_818",
+          "UN_826"
+        ]
+      }
+    ]
+  }
+}

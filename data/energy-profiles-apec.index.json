@@ -1,0 +1,338 @@
+{
+  "years": [
+    2010,
+    2015,
+    2020,
+    2025,
+    2030,
+    2035,
+    2040,
+    2045,
+    2050,
+    2055,
+    2060
+  ],
+  "defaultYear": 2020,
+  "scenario": "reference",
+  "year_groups": {
+    "2010": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2010-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2015": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2015-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2020": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2020-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2025": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2025-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2030": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2030-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2035": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2035-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2040": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2040-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2045": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2045-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2050": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2050-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2055": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2055-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ],
+    "2060": [
+      {
+        "id": "g0",
+        "file": "energy-profiles-apec-2060-g0.json",
+        "economies": [
+          "01_AUS",
+          "02_BD",
+          "03_CDA",
+          "04_CHL",
+          "05_PRC",
+          "06_HKC",
+          "07_INA",
+          "08_JPN",
+          "09_ROK",
+          "10_MAS",
+          "11_MEX",
+          "12_NZ",
+          "13_PNG",
+          "14_PE",
+          "15_PHL",
+          "16_RUS",
+          "17_SGP",
+          "18_CT",
+          "19_THA",
+          "20_USA",
+          "21_VN"
+        ]
+      }
+    ]
+  }
+}
