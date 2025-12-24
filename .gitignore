@@ -24,3 +24,6 @@ yarn-error.log*
 
 # large local source data (kept out of git)
 merged_file_energy_ALL_*.csv
+scripts/un_mirror/normalized/energy_obs*.csv
+EI-Stats-Review-ALL-data.xlsx
+owid-energy-data.xlsx
