@@ -5,29 +5,40 @@ import { EnergyGuessRow } from "./EnergyGuessRow";
 interface EnergyGuessesProps {
   rowCount: number;
   guesses: EnergyGuess[];
+  hideTable?: boolean;
+  compact?: boolean;
 }
 
-export function EnergyGuesses({ rowCount, guesses }: EnergyGuessesProps) {
+export function EnergyGuesses({
+  rowCount,
+  guesses,
+  hideTable = false,
+  compact = false,
+}: EnergyGuessesProps) {
+  if (hideTable) {
+    return null;
+  }
+
+  const cellBase =
+    "border-2 flex items-center justify-center text-center " +
+    (compact ? "py-1 text-sm leading-tight" : "h-8 text-xs");
+  const rows = guesses.filter(Boolean);
+  if (rows.length === 0) {
+    return null;
+  }
+
   return (
-    <div>
-      <div className="grid grid-cols-5 gap-1 text-center text-xs font-semibold mb-1">
-        <div className="border-2 h-8 flex items-center justify-center">
-          Economy
-        </div>
-        <div className="border-2 h-8 flex items-center justify-center">TFC</div>
-        <div className="border-2 h-8 flex items-center justify-center">
-          TPES
-        </div>
-        <div className="border-2 h-8 flex items-center justify-center">
-          Elec gen
-        </div>
-        <div className="border-2 h-8 flex items-center justify-center">
-          Net imports
-        </div>
+    <div className="space-y-1">
+      <div className="grid grid-cols-5 gap-1 text-center font-semibold text-xs">
+        <div className={cellBase}>Country</div>
+        <div className={cellBase}>Total final consumption</div>
+        <div className={cellBase}>Production</div>
+        <div className={cellBase}>Net imports</div>
+        <div className={cellBase}>Electricity generation</div>
       </div>
       <div className="grid grid-cols-5 gap-1 text-center">
-        {Array.from(Array(rowCount).keys()).map((index) => (
-          <EnergyGuessRow key={index} guess={guesses[index]} />
+        {rows.map((guess, index) => (
+          <EnergyGuessRow key={index} guess={guess} compact={compact} />
         ))}
       </div>
     </div>

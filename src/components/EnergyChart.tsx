@@ -1,42 +1,35 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import chartMeta from "../config/chartMeta.json";
 import { EnergyProfile, SectorKey, formatEnergy } from "../domain/energy";
+import { computeCardSizing } from "../utils/cardSizing";
 
-const FUEL_COLORS: Record<string, string> = {
-  coal: "#1f2933",
-  oil: "#b05b1d",
-  gas: "#1c7ed6",
-  renewables: "#2e8b57",
-  renewables_and_others: "#2e8b57",
-  electricity: "#7b1fa2",
-  elec_gen: "#7b1fa2",
-  net_imports: "#0d9488",
-  industry: "#4b5563",
-  transport: "#f97316",
-  buildings: "#eab308",
-  non_energy_use: "#db2777",
-  others: "#94a3b8",
-  other: "#9ca3af",
+type FuelMeta = {
+  key: string;
+  color: string;
+  order: number;
+  hide_in_elec_gen?: boolean;
 };
-
-const FUEL_ORDER: Record<string, number> = {
-  coal: 0,
-  oil: 1,
-  gas: 2,
-  renewables_and_others: 3,
-  renewables: 3,
-  other: 4,
-  industry: 5,
-  transport: 6,
-  buildings: 7,
-  non_energy_use: 8,
-  others: 9,
-  electricity: 10,
-  elec_gen: 10,
-  net_imports: 11,
-};
+const fuelMeta: FuelMeta[] = chartMeta.fuels as FuelMeta[];
+const FUEL_COLORS = fuelMeta.reduce<Record<string, string>>((acc, f) => {
+  acc[f.key] = f.color;
+  return acc;
+}, {});
+const FUEL_ORDER = fuelMeta.reduce<Record<string, number>>((acc, f) => {
+  acc[f.key] = f.order;
+  return acc;
+}, {});
 
 function formatFuelLabel(fuel: string): string {
-  return fuel.replace(/_and_/g, " & ").replace(/_/g, " ");
+  if (fuel === "renewables_and_others") return "Ren. & Others";
+  if (fuel === "wind_solar") return "Wind & Solar";
+  const normalized = fuel.replace(/_and_/g, " & ").replace(/_/g, " ");
+  const parts = normalized.split(" ").filter(Boolean);
+  return parts
+    .map((part) => {
+      if (part === "&") return "&";
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    })
+    .join(" ");
 }
 
 interface EnergyChartProps {
@@ -44,10 +37,11 @@ interface EnergyChartProps {
   sectors: SectorKey[];
   year: number;
   scenario: string;
+  source?: "apec" | "world" | string;
 }
 
 const SECTOR_LABELS: Record<string, string> = {
-  "07_total_primary_energy_supply": "Total primary energy supply",
+  "01_production": "Production",
   "12_total_final_consumption": "Total final consumption",
   "09_total_transformation_sector": "Total transformation sector",
   "18_electricity_output_in_gwh": "Electricity generation",
@@ -59,58 +53,86 @@ export function EnergyChart({
   sectors,
   year,
   scenario,
+  source,
 }: EnergyChartProps) {
   const [showImage, setShowImage] = useState(true);
-
-  const chartSectors =
-    sectors.length > 0
-      ? sectors
-      : (Object.keys(profile.sectors) as SectorKey[]);
+  const chartSectors = (
+    sectors.length > 0 ? sectors : (Object.keys(profile.sectors) as SectorKey[])
+  ).sort((a, b) => {
+    // Keep Electricity generation at the right end for clarity
+    const isElec = (key: string) => key === "18_electricity_output_in_gwh";
+    if (isElec(a) && !isElec(b)) return 1;
+    if (!isElec(a) && isElec(b)) return -1;
+    return 0;
+  });
 
   const sortFuels = (
     fuels: { fuel: string; value: number }[],
     sector: string
   ) => {
-    let filtered = fuels;
-    if (sector === "18_electricity_output_in_gwh") {
-      filtered = fuels.filter(
-        (item) =>
-          item.fuel !== "electricity" &&
-          item.fuel !== "elec_gen" &&
-          item.fuel !== "17_electricity"
-      );
-    }
-    // Ensure electricity shows last in other charts
-    return filtered.sort(
+    const filtered =
+      sector === "18_electricity_output_in_gwh"
+        ? fuels.filter(
+            (item) =>
+              !fuelMeta.find((f) => f.key === item.fuel)?.hide_in_elec_gen
+          )
+        : fuels;
+    const nonZero = filtered.filter((f) => Number(f.value) !== 0);
+    return nonZero.sort(
       (a, b) => (FUEL_ORDER[a.fuel] ?? 99) - (FUEL_ORDER[b.fuel] ?? 99)
     );
   };
 
-  const { maxValue, minValue } = chartSectors.reduce(
-    (acc, sectorKey) => {
-      const sectorValues = profile.sectors[sectorKey] ?? [];
-      sectorValues.forEach((item) => {
-        const numericValue = Number(item.value) || 0;
-        acc.maxValue = Math.max(acc.maxValue, numericValue);
-        acc.minValue = Math.min(acc.minValue, numericValue);
-      });
-      return acc;
-    },
-    { maxValue: 0, minValue: 0 }
-  );
+  const elecLabel = useMemo(() => {
+    return "Electricity generation (2023)";
+  }, []);
 
-  const hasPositive = maxValue > 0;
-  const hasNegative = minValue < 0;
-  const range =
-    hasPositive && hasNegative
-      ? maxValue - minValue
-      : Math.max(maxValue, Math.abs(minValue)) || 1;
-  const baselinePercent =
-    hasPositive && hasNegative
-      ? (-minValue / (maxValue - minValue)) * 100
-      : hasPositive
-      ? 0
-      : 100;
+  const chartSpan = 70; // percentage span for bars, leaves headroom
+
+  const computeScale = (
+    sectorKey: string,
+    fuels: { fuel: string; value: number }[]
+  ) => {
+    if (!fuels.length) {
+      return { range: 1, baselineScaled: 0, maxLabel: 0, minLabel: 0 };
+    }
+    const values = fuels.map((f) => Number(f.value) || 0);
+    const localMax = Math.max(...values);
+    const localMin = Math.min(...values);
+
+    if (sectorKey === "net_imports") {
+      const minVal = Math.min(0, localMin);
+      const maxVal = Math.max(0, localMax);
+      const range = Math.abs(minVal) + Math.max(maxVal, 0);
+      const baselinePercent = range ? (Math.abs(minVal) / range) * 100 : 0;
+      return {
+        range: range || 1,
+        baselineScaled: (baselinePercent / 100) * chartSpan,
+        maxLabel: maxVal,
+        minLabel: minVal,
+      };
+    }
+    const cappedMin = Math.min(0, localMin);
+    const cappedMax = Math.max(0, localMax);
+    const hasPositive = cappedMax > 0;
+    const hasNegative = cappedMin < 0;
+    const range =
+      hasPositive && hasNegative
+        ? cappedMax - cappedMin
+        : Math.max(cappedMax, Math.abs(cappedMin)) || 1;
+    const baselinePercent =
+      hasPositive && hasNegative
+        ? (-cappedMin / (cappedMax - cappedMin)) * 100
+        : hasPositive
+        ? 0
+        : 100;
+    return {
+      range,
+      baselineScaled: (baselinePercent / 100) * chartSpan,
+      maxLabel: cappedMax,
+      minLabel: cappedMin,
+    };
+  };
 
   return (
     <div className="space-y-4">
@@ -122,63 +144,107 @@ export function EnergyChart({
           onError={() => setShowImage(false)}
         />
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div
+        className="grid gap-3"
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}
+      >
         {chartSectors.map((sectorKey) => {
           const fuels = sortFuels(profile.sectors[sectorKey] ?? [], sectorKey);
+          const barCount = Math.max(1, fuels.length);
+          const sizing = computeCardSizing(barCount, sectorKey);
+          const sectorTitle =
+            sectorKey === "18_electricity_output_in_gwh"
+              ? elecLabel
+              : SECTOR_LABELS[sectorKey] ?? sectorKey;
+          const { range, baselineScaled, maxLabel, minLabel } = computeScale(
+            sectorKey,
+            fuels
+          );
+          const barGap =
+            fuels.length >= 10 ? "4px" : fuels.length >= 7 ? "6px" : "10px";
+          const gridColumnWidth = "minmax(28px, 1fr)";
           return (
             <div
               key={sectorKey}
-              className="border rounded p-3 bg-white dark:bg-slate-800"
+              className="border rounded p-3 bg-white dark:bg-slate-800 text-[13px]"
+              style={{
+                gridColumn: `span ${sizing.span} / span ${sizing.span}`,
+                minWidth: `${sizing.minWidth}px`,
+              }}
             >
               <div className="flex items-baseline mb-2">
-                <p className="text-sm font-semibold">
-                  {SECTOR_LABELS[sectorKey] ?? sectorKey}
-                </p>
+                <p className="text-sm font-semibold">{sectorTitle}</p>
               </div>
               {fuels.length === 0 ? (
                 <p className="text-xs text-gray-500">No data</p>
               ) : (
                 <div
-                  className="relative h-48 flex items-end gap-2"
-                  style={{ paddingLeft: "36px" }}
+                  className="relative h-48 w-full grid items-start"
+                  style={{
+                    paddingLeft: "36px",
+                    paddingTop: "0px",
+                    gap: barGap,
+                    gridTemplateColumns: `repeat(auto-fit, ${gridColumnWidth})`,
+                  }}
                 >
                   <div className="absolute left-[30px] top-0 bottom-0 w-px bg-gray-300 dark:bg-slate-600" />
-                  <div className="absolute left-0 top-0 text-[10px] text-gray-500 dark:text-gray-400">
-                    {formatEnergy(maxValue)}
+                  <div
+                    className="absolute top-0 text-[10px] text-gray-500 dark:text-gray-400 w-12 text-center leading-tight"
+                    style={{ left: "-18px" }}
+                  >
+                    {formatEnergy(maxLabel)}
                   </div>
-                  <div className="absolute left-0 bottom-0 text-[10px] text-gray-500 dark:text-gray-400">
-                    {formatEnergy(minValue)}
+                  <div
+                    className="absolute bottom-0 text-[10px] text-gray-500 dark:text-gray-400 w-12 text-center leading-tight"
+                    style={{ left: "-18px" }}
+                  >
+                    {formatEnergy(minLabel)}
                   </div>
                   <div
                     className="absolute h-px bg-gray-400 dark:bg-slate-500 w-full"
-                    style={{ bottom: `${baselinePercent}%`, left: 0 }}
+                    style={{ bottom: `${baselineScaled}%`, left: 0 }}
                   />
                   {fuels.map((item) => {
                     const numericValue = Number(item.value) || 0;
                     const heightPercent =
-                      (Math.abs(numericValue) / range) * 100;
+                      (Math.abs(numericValue) / range) * chartSpan;
                     const isPositive = numericValue >= 0;
                     const color = FUEL_COLORS[item.fuel] ?? FUEL_COLORS.other;
+                    const negativeBottom = Math.max(
+                      0,
+                      baselineScaled - heightPercent
+                    );
                     return (
-                      <div key={item.fuel} className="flex-1 h-full relative">
+                      <div
+                        key={item.fuel}
+                        className="h-full relative flex flex-col items-center"
+                        style={{ width: "100%" }}
+                      >
                         <div
                           className="absolute left-1/4 right-1/4 rounded"
                           style={
                             isPositive
                               ? {
                                   height: `${heightPercent}%`,
-                                  bottom: `${baselinePercent}%`,
+                                  bottom: `${baselineScaled}%`,
                                   backgroundColor: color,
                                 }
                               : {
                                   height: `${heightPercent}%`,
-                                  top: `${100 - baselinePercent}%`,
+                                  bottom: `${negativeBottom}%`,
                                   backgroundColor: color,
                                 }
                           }
                           title={`${item.fuel}: ${formatEnergy(numericValue)}`}
                         />
-                        <p className="text-[10px] mt-1 text-center text-gray-700 dark:text-gray-200 break-words">
+                        <p
+                          className="text-[10px] mt-0 text-center text-gray-700 dark:text-gray-200 break-words leading-tight"
+                          style={{
+                            minHeight: "40px",
+                            padding: "0 4px",
+                            overflowWrap: "anywhere",
+                          }}
+                        >
                           {formatFuelLabel(item.fuel)}
                         </p>
                       </div>

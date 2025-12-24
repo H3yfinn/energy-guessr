@@ -5,12 +5,12 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      placeholder: "Economy or market...",
+      placeholder: "Type the country...",
       guess: "Guess",
       share: "Share",
       showOnGoogleMaps: "Open on Google Maps",
       welldone: "Well done!",
-      unknownCountry: "Unknown economy!",
+      unknownCountry: "Unknown country!",
       copy: "Copied results to clipboard",
       showCountry: "Show chart",
       cancelRotation: "Cancel rotation",
@@ -28,7 +28,7 @@ const resources = {
   },
   fr: {
     translation: {
-      placeholder: "Economie ou marché...",
+      placeholder: "Tapez le pays...",
       guess: "Deviner",
       share: "Partager",
       showOnGoogleMaps: "Ouvrir sur Google Maps",

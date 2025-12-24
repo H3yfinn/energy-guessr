@@ -15,6 +15,13 @@ export function EnergyInput({
   options,
 }: EnergyInputProps) {
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const titleCase = (val: string) =>
+    val
+      .trim()
+      .replace(/[_\s]+/g, " ")
+      .split(" ")
+      .map((w) => (w ? w[0].toUpperCase() + w.slice(1).toLowerCase() : w))
+      .join(" ");
 
   return (
     <Autosuggest
@@ -30,7 +37,7 @@ export function EnergyInput({
       getSuggestionValue={(suggestion) => suggestion}
       renderSuggestion={(suggestion) => (
         <div className="border-2 dark:bg-slate-800 dark:text-slate-100">
-          {suggestion}
+          {titleCase(suggestion)}
         </div>
       )}
       containerProps={{
@@ -41,6 +48,20 @@ export function EnergyInput({
         placeholder: t("placeholder"),
         value: currentGuess,
         onChange: (_e, { newValue }) => setCurrentGuess(newValue),
+        onKeyDown: (e) => {
+          if (
+            suggestions.length > 0 &&
+            (e.key === "Enter" || e.key === "Tab")
+          ) {
+            const first = suggestions[0];
+            if (first && first !== currentGuess) {
+              setCurrentGuess(first);
+              if (e.key === "Tab") {
+                e.preventDefault();
+              }
+            }
+          }
+        },
       }}
       renderSuggestionsContainer={({ containerProps, children }) => (
         <div

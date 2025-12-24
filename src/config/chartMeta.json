@@ -1,0 +1,100 @@
+{
+  "fuels": [
+    {
+      "key": "coal",
+      "color": "#1f2933",
+      "order": 0
+    },
+    {
+      "key": "oil",
+      "color": "#b05b1d",
+      "order": 1
+    },
+    {
+      "key": "gas",
+      "color": "#1c7ed6",
+      "order": 2
+    },
+    {
+      "key": "thermal",
+      "color": "#7c4dff",
+      "order": 3
+    },
+    {
+      "key": "hydro",
+      "color": "#0ea5e9",
+      "order": 4
+    },
+    {
+      "key": "solar",
+      "color": "#f59e0b",
+      "order": 5
+    },
+    {
+      "key": "wind",
+      "color": "#22c55e",
+      "order": 6
+    },
+    {
+      "key": "tide",
+      "color": "#10b981",
+      "order": 7
+    },
+    {
+      "key": "nuclear",
+      "color": "#8b5cf6",
+      "order": 8
+    },
+    {
+      "key": "geothermal",
+      "color": "#14b8a6",
+      "order": 9
+    },
+    {
+      "key": "wind_solar",
+      "color": "#22c55e",
+      "order": 10
+    },
+    {
+      "key": "renewables_and_others",
+      "color": "#2e8b57",
+      "order": 11
+    },
+    {
+      "key": "electricity",
+      "color": "#7b1fa2",
+      "order": 99,
+      "hide_in_elec_gen": true
+    },
+    {
+      "key": "net_imports",
+      "color": "#0d9488",
+      "order": 100
+    },
+    {
+      "key": "industry",
+      "color": "#4b5563",
+      "order": 101
+    },
+    {
+      "key": "transport",
+      "color": "#f97316",
+      "order": 102
+    },
+    {
+      "key": "buildings",
+      "color": "#eab308",
+      "order": 103
+    },
+    {
+      "key": "non_energy_use",
+      "color": "#db2777",
+      "order": 104
+    },
+    {
+      "key": "others",
+      "color": "#94a3b8",
+      "order": 105
+    }
+  ]
+}

@@ -2,7 +2,7 @@
  * Run the CSV -> JSON energy data conversion on startup.
  *
  * This keeps the large source file local and regenerates the app's
- * `public/data/energy-profiles.json` before `npm start` / `npm run build`.
+ * `public/data/energy-profiles-apec.json` before `npm start` / `npm run build`.
  *
  * It is intentionally forgiving: if the CSV or Python is missing, it will
  * log a warning and continue so dev server still launches.
@@ -20,7 +20,7 @@ const outputJson = path.resolve(
   projectRoot,
   "public",
   "data",
-  "energy-profiles.json"
+  "energy-profiles-apec.json"
 );
 const scriptPath = path.resolve(
   projectRoot,
@@ -31,6 +31,12 @@ const scriptPath = path.resolve(
 function log(msg) {
   // eslint-disable-next-line no-console
   console.log(`[energy-prepare] ${msg}`);
+}
+
+// Allow opting out via environment variable
+if (process.env.SKIP_ENERGY_PREP === "1" || process.env.SKIP_ENERGY_PREP === "true") {
+  log("SKIP_ENERGY_PREP set; skipping data generation.");
+  process.exit(0);
 }
 
 function run() {

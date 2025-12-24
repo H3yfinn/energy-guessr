@@ -8,34 +8,69 @@ Guess the economy by looking at its energy balance charts. The app reads a pre-g
 2) `npm start`  
 3) Open http://localhost:3000 and play.
 
-The app will use `public/data/energy-profiles.json` if present. If it is missing, it falls back to the sample dataset in `public/data/energy-profiles.sample.json`.
+The app will use `public/data/energy-profiles-apec.json` (or `energy-profiles-un.json` when you switch to World). If an APEC file is missing, it falls back to the sample dataset in `public/data/energy-profiles.sample.json`.
 
-## Data pipeline (CSV → JSON)
+## Data pipeline (APEC + UN)
 
-- The source CSV (`merged_file_energy_ALL_*.csv`) stays local and is ignored by git.
-- `scripts/create_energy_assets_csv.py` converts that CSV into `public/data/energy-profiles.json` (the file the app serves).
-- When you run `npm start` or `npm run build`, npm automatically runs a matching `prestart`/`prebuild` step first. (These are just npm “hooks”: scripts that run before the main command.) That step calls `scripts/prepare-energy-data.js` to make sure `public/data/energy-profiles.json` exists.
-  - If the CSV is present on your machine, it regenerates the JSON (may take ~20–30s).
-  - If the CSV is missing (e.g., in GitHub Pages CI or on a machine without the CSV), it just logs a warning and leaves the existing JSON in `public/data/`.
-- Commit the generated `public/data/energy-profiles.json` so deployments can run without the CSV.
-- Optional: `scripts/create_energy_assets.py` supports Excel inputs and can also emit chart images into `public/energy-graphs/`.
+- There are two datasets:
+  - **APEC** (existing CSV/Excel source) → `public/data/energy-profiles-apec.json`.
+  - **World/UN** (mirrored SDMX data) → `public/data/energy-profiles-un.json` (multi-year, e.g., 2010 & 2020).
+- Both are generated manually (no prestart/prebuild hooks). You should run the prep scripts before starting/building if you want fresh data.
 
-### Regenerate the JSON locally
+### JSON structure (APEC & UN)
 
+- Top-level (multi-year): `{ years: [..], defaultYear: 2020, scenario: "reference", datasets: { "2020": { year, scenario, profiles: [...] }, ... } }`.
+- Each profile: `{ economy, name, source, metrics, sectors }`.
+  - `metrics`: `{ tpes, tfc, elec_gen, net_imports, net_imports_by_fuel: [{fuel,value},...] }`.
+  - `sectors` (only what the app charts):
+    - `07_total_primary_energy_supply`: by fuel.
+    - `12_total_final_consumption`: single `{fuel:"tfc", value:<total>}` entry.
+    - `18_electricity_output_in_gwh`: by fuel (APEC = output, UN = transformation inputs).
+    - `net_imports`: by fuel (total in metrics).
+
+### UN mirror + prep (world data)
+
+1) Mirror UN energy SDMX data (runs HTTP downloads; may take time):
+   ```bash
+   python scripts/download_UN_data.py  # mirrors raw XML slices
+   ```
+2) Export labeled data with conversions and PJ values:
+   ```bash
+   # in a notebook or shell
+   from scripts.download_UN_data import export_mirror_to_csv_labeled, CFG
+   export_mirror_to_csv_labeled(CFG.out_raw_dir, Path("scripts/un_mirror/normalized/energy_obs_labeled.csv"))
+   ```
+3) Build the world JSON (multi-year, default 2010 & 2020):
+   ```bash
+   python scripts/run_energy_prep.py --un-input scripts/un_mirror/normalized/energy_obs_labeled.csv
+   # outputs public/data/energy-profiles-un.json
+   ```
+
+### APEC prep (CSV/Excel → JSON)
+
+- One-shot (CSV or Excel):
+  ```bash
+  python scripts/run_energy_prep.py --apec-input merged_file_energy_ALL_20250814.csv --skip-charts
+  # or: --apec-input data/apec_energy.xlsx
+  ```
+
+### One-shot prep for both (APEC + UN)
+
+Use the helper wrapper (no npm hooks):
 ```bash
-python scripts/create_energy_assets_csv.py ^
-  --input ./merged_file_energy_ALL_20250814.csv ^
-  --output-json ./public/data/energy-profiles.json ^
-  --years 2010 2015 2020 2025 2030 2035 2040 2045 2050 2055 2060 ^
-  --default-year 2020 ^
-  --scenario reference ^
-  --label-column economy_name
+  python scripts/run_energy_prep.py \
+    --apec-input data/apec_energy.xlsx \
+    --un-input scripts/un_mirror/normalized/energy_obs_labeled.csv \
+    --output-json public/data/energy-profiles-apec.json \
+    --un-output-json public/data/energy-profiles-un.json \
+    --un-years 2010 2020 \
+    --skip-charts
 ```
 
 Notes:
-- Required columns: `economy`, `sectors`, `scenarios`, `fuels`, and numeric year columns (e.g., `2020`).
-- Only selected sectors are kept by default: `07_total_primary_energy_supply`, `12_total_final_consumption`, `09_total_transformation_sector`, `18_electricity_output_in_gwh`, and net imports are derived.
-- Uses chunked CSV reads so the large file does not need to fit in memory.
+- Required columns for APEC CSV: `economy`, `sectors`, `scenarios`, `fuels`, numeric year columns (e.g., `2020`).
+- UN prep relies on `VALUE_PJ` from the labeled exporter; exports are negative; net_imports are computed.
+- Keep raw CSV/XML out of git; commit the generated JSONs.
 
 ### Deploying (GitHub Pages)
 
@@ -50,7 +85,7 @@ Notes:
 
 ## Where to edit
 
-- Data: `public/data/energy-profiles.json` (tracked), `public/energy-graphs/` (optional images)
+- Data: `public/data/energy-profiles-apec.json` (tracked), `public/data/energy-profiles-un.json` (tracked), `public/energy-graphs/` (optional images)
 - Types/logic: `src/domain/energy.ts`
 - UI: `src/components/EnergyGame.tsx`, `src/components/EnergyChart.tsx`, `src/components/EnergyShare.tsx`
 

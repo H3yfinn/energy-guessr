@@ -1,0 +1,4094 @@
+{
+  "year": 2010,
+  "scenario": "reference",
+  "profiles": [
+    {
+      "economy": "UN_788",
+      "name": "Tunisia",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "gas",
+            "value": 311.9026
+          },
+          {
+            "fuel": "oil",
+            "value": 156.3831
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 49.920500003265005
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.5418
+          },
+          {
+            "fuel": "electricity",
+            "value": 23.0796
+          },
+          {
+            "fuel": "gas",
+            "value": 39.457
+          },
+          {
+            "fuel": "oil",
+            "value": 50.354440000000004
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.14
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.3744
+          },
+          {
+            "fuel": "gas",
+            "value": 34.218
+          },
+          {
+            "fuel": "oil",
+            "value": 82.7646
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 26.982
+          },
+          {
+            "fuel": "gas",
+            "value": 14.286
+          },
+          {
+            "fuel": "oil",
+            "value": 24.80556
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 37.30284999287
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.5418
+          },
+          {
+            "fuel": "electricity",
+            "value": 44.6868
+          },
+          {
+            "fuel": "gas",
+            "value": 51.6112
+          },
+          {
+            "fuel": "oil",
+            "value": 70.94735999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 37.44384999287
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 8.62842
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 113.57284
+          },
+          {
+            "fuel": "transport",
+            "value": 117.357
+          },
+          {
+            "fuel": "buildings",
+            "value": 103.37640999287
+          },
+          {
+            "fuel": "others",
+            "value": 205.23100999286999
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 8.62842
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 58.92912
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.18
+          },
+          {
+            "fuel": "solar",
+            "value": 0.00072
+          },
+          {
+            "fuel": "thermal",
+            "value": 56.538
+          },
+          {
+            "fuel": "wind",
+            "value": 0.5004
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 0.5418
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.06839999999999996
+          },
+          {
+            "fuel": "gas",
+            "value": 92.43960000000001
+          },
+          {
+            "fuel": "oil",
+            "value": 6.740606000000042
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 518.206200003265,
+        "tfc": 548.16567998574,
+        "elec_gen": 116.14824,
+        "net_imports": 99.79040600000006,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 0.5418
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.06839999999999996
+          },
+          {
+            "fuel": "gas",
+            "value": 92.43960000000001
+          },
+          {
+            "fuel": "oil",
+            "value": 6.740606000000042
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_792",
+      "name": "Turkey",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 1653.057633
+          },
+          {
+            "fuel": "gas",
+            "value": 52.373000000000005
+          },
+          {
+            "fuel": "oil",
+            "value": 110.961444
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 189.29699999902496
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 538.821189
+          },
+          {
+            "fuel": "electricity",
+            "value": 321.76079999999996
+          },
+          {
+            "fuel": "gas",
+            "value": 418.969
+          },
+          {
+            "fuel": "oil",
+            "value": 54.7459
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 113.512
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.8512000000000004
+          },
+          {
+            "fuel": "gas",
+            "value": 19.378999999999998
+          },
+          {
+            "fuel": "oil",
+            "value": 609.0095
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.5152
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 524.4711759999999
+          },
+          {
+            "fuel": "electricity",
+            "value": 311.5548
+          },
+          {
+            "fuel": "gas",
+            "value": 297.291
+          },
+          {
+            "fuel": "geothermal",
+            "value": 58.257
+          },
+          {
+            "fuel": "oil",
+            "value": 62.414300000000004
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 198.347000001005
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 873.6616009999999
+          },
+          {
+            "fuel": "electricity",
+            "value": 534.6432
+          },
+          {
+            "fuel": "gas",
+            "value": 541.29
+          },
+          {
+            "fuel": "geothermal",
+            "value": 58.257
+          },
+          {
+            "fuel": "oil",
+            "value": 314.0237
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 255.36060000100497
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "gas",
+            "value": 9.116
+          },
+          {
+            "fuel": "oil",
+            "value": 289.4353
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 1447.808889
+          },
+          {
+            "fuel": "transport",
+            "value": 631.7549
+          },
+          {
+            "fuel": "buildings",
+            "value": 1452.3352760010048
+          },
+          {
+            "fuel": "others",
+            "value": 2577.236101001005
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 298.55129999999997
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 760.3488
+          },
+          {
+            "fuel": "hydro",
+            "value": 186.4656
+          },
+          {
+            "fuel": "thermal",
+            "value": 560.5812
+          },
+          {
+            "fuel": "wind",
+            "value": 10.4976
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 1181.972957
+          },
+          {
+            "fuel": "electricity",
+            "value": -2.7863999999999995
+          },
+          {
+            "fuel": "gas",
+            "value": 1432.147
+          },
+          {
+            "fuel": "oil",
+            "value": 1278.9004140000002
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 2005.6890769990248,
+        "tfc": 6407.686466002009,
+        "elec_gen": 1517.8932,
+        "net_imports": 3890.233971,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 1181.972957
+          },
+          {
+            "fuel": "electricity",
+            "value": -2.7863999999999995
+          },
+          {
+            "fuel": "gas",
+            "value": 1432.147
+          },
+          {
+            "fuel": "oil",
+            "value": 1278.9004140000002
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_795",
+      "name": "Turkmenistan",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "gas",
+            "value": 3432.744
+          },
+          {
+            "fuel": "oil",
+            "value": 413.694
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.10200000321
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 20.1456
+          },
+          {
+            "fuel": "gas",
+            "value": 60.352
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.8568
+          },
+          {
+            "fuel": "gas",
+            "value": 74.224
+          },
+          {
+            "fuel": "oil",
+            "value": 90.3615
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 6.9552
+          },
+          {
+            "fuel": "gas",
+            "value": 292.78000000000003
+          },
+          {
+            "fuel": "oil",
+            "value": 7.883999999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.42650000321000003
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 31.1688
+          },
+          {
+            "fuel": "gas",
+            "value": 380.74839999999995
+          },
+          {
+            "fuel": "oil",
+            "value": 255.5448
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 16.508500003210003
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 80.4976
+          },
+          {
+            "fuel": "transport",
+            "value": 165.44230000000002
+          },
+          {
+            "fuel": "buildings",
+            "value": 308.04570000321
+          },
+          {
+            "fuel": "others",
+            "value": 683.97050000321
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 59.976
+          },
+          {
+            "fuel": "thermal",
+            "value": 59.976
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": -8.676
+          },
+          {
+            "fuel": "gas",
+            "value": -909.668
+          },
+          {
+            "fuel": "oil",
+            "value": -180.1207
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.3245
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 3846.54000000321,
+        "tfc": 1237.95610000642,
+        "elec_gen": 119.952,
+        "net_imports": -1098.1402,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": -8.676
+          },
+          {
+            "fuel": "gas",
+            "value": -909.668
+          },
+          {
+            "fuel": "oil",
+            "value": -180.1207
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.3245
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_796",
+      "name": "Turks and Caicos Islands",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.012793
+          }
+        ],
+        "14_industry_sector": [],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 1.58453
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.69408
+          },
+          {
+            "fuel": "oil",
+            "value": 0.18447
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.00839846
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.69408
+          },
+          {
+            "fuel": "oil",
+            "value": 0.18447
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.00839846
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.06432
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0
+          },
+          {
+            "fuel": "transport",
+            "value": 1.58453
+          },
+          {
+            "fuel": "buildings",
+            "value": 0.88694846
+          },
+          {
+            "fuel": "others",
+            "value": 0.88694846
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.06432
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.7488
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.7488
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 4.92034
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0024018999999999998
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0.012793,
+        "tfc": 3.4227469200000002,
+        "elec_gen": 1.4976,
+        "net_imports": 4.9227419,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 4.92034
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0024018999999999998
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_798",
+      "name": "Tuvalu",
+      "source": "UN",
+      "sectors": {
+        "01_production": [],
+        "14_industry_sector": [],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 0.0589465
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.019465200000000002
+          },
+          {
+            "fuel": "oil",
+            "value": 0.0105026
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.0194652
+          },
+          {
+            "fuel": "oil",
+            "value": 0.0151983999999999
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0
+          },
+          {
+            "fuel": "transport",
+            "value": 0.0589465
+          },
+          {
+            "fuel": "buildings",
+            "value": 0.029967800000000003
+          },
+          {
+            "fuel": "others",
+            "value": 0.0346635999999999
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.023202
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0004968
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.0227052
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 0.14552449999999992
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0,
+        "tfc": 0.12357789999999991,
+        "elec_gen": 0.046404,
+        "net_imports": 0.14552449999999992,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 0.14552449999999992
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_8",
+      "name": "Albania",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 0.2957047999999999
+          },
+          {
+            "fuel": "gas",
+            "value": 1.07598
+          },
+          {
+            "fuel": "oil",
+            "value": 31.469085
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 8.577765
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 9.675594
+          },
+          {
+            "fuel": "electricity",
+            "value": 4.9943159999999995
+          },
+          {
+            "fuel": "gas",
+            "value": 0.07098
+          },
+          {
+            "fuel": "oil",
+            "value": 9.535904
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.2510297999999998
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 32.578377
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.2957047999999999
+          },
+          {
+            "fuel": "electricity",
+            "value": 16.302204
+          },
+          {
+            "fuel": "oil",
+            "value": 5.4891
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 8.441934949999998
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 5.1335018
+          },
+          {
+            "fuel": "electricity",
+            "value": 19.616652
+          },
+          {
+            "fuel": "gas",
+            "value": 0.03549
+          },
+          {
+            "fuel": "oil",
+            "value": 13.583884000000003
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 8.860409300000002
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 3.637296
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 24.5278238
+          },
+          {
+            "fuel": "transport",
+            "value": 32.578377
+          },
+          {
+            "fuel": "buildings",
+            "value": 30.528943749999996
+          },
+          {
+            "fuel": "others",
+            "value": 47.2299371
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 3.637296
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 27.879012
+          },
+          {
+            "fuel": "hydro",
+            "value": 27.87588
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.003132
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 4.837797
+          },
+          {
+            "fuel": "electricity",
+            "value": -3.4164720000000006
+          },
+          {
+            "fuel": "oil",
+            "value": 21.154301000000007
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 41.418534799999996,
+        "tfc": 138.50237765,
+        "elec_gen": 55.758024,
+        "net_imports": 22.575626000000007,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 4.837797
+          },
+          {
+            "fuel": "electricity",
+            "value": -3.4164720000000006
+          },
+          {
+            "fuel": "oil",
+            "value": 21.154301000000007
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_800",
+      "name": "Uganda",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 638.636522665
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.00774
+          },
+          {
+            "fuel": "electricity",
+            "value": 4.49784
+          },
+          {
+            "fuel": "oil",
+            "value": 12.033600000000002
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 64.650235946
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 21.4071
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.0178
+          },
+          {
+            "fuel": "oil",
+            "value": 2.2356231303
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 497.12945837899997
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.00387
+          },
+          {
+            "fuel": "electricity",
+            "value": 4.37724
+          },
+          {
+            "fuel": "oil",
+            "value": 12.309923130300001
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 529.454576352
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.48650040000000006
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 81.189415946
+          },
+          {
+            "fuel": "transport",
+            "value": 21.4071
+          },
+          {
+            "fuel": "buildings",
+            "value": 501.3828815093
+          },
+          {
+            "fuel": "others",
+            "value": 546.1456094823
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.48650040000000006
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 8.84124
+          },
+          {
+            "fuel": "hydro",
+            "value": 4.84884
+          },
+          {
+            "fuel": "thermal",
+            "value": 3.9924
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 0.00387
+          },
+          {
+            "fuel": "electricity",
+            "value": -0.16128
+          },
+          {
+            "fuel": "oil",
+            "value": 50.16633916629999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -7.550000000000699e-07
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 638.636522665,
+        "tfc": 1150.6115073376,
+        "elec_gen": 17.68248,
+        "net_imports": 50.00892841129999,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 0.00387
+          },
+          {
+            "fuel": "electricity",
+            "value": -0.16128
+          },
+          {
+            "fuel": "oil",
+            "value": 50.16633916629999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -7.550000000000699e-07
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_804",
+      "name": "Ukraine",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 2771.922002
+          },
+          {
+            "fuel": "gas",
+            "value": 1437.6979999999999
+          },
+          {
+            "fuel": "oil",
+            "value": 109.2186
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 60.621445
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 214.830589
+          },
+          {
+            "fuel": "electricity",
+            "value": 377.7048
+          },
+          {
+            "fuel": "gas",
+            "value": 533.996
+          },
+          {
+            "fuel": "oil",
+            "value": 103.2322
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 323.50725
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "coal",
+            "value": 2.8834699999999995
+          },
+          {
+            "fuel": "electricity",
+            "value": 42.0336
+          },
+          {
+            "fuel": "gas",
+            "value": 305.304
+          },
+          {
+            "fuel": "oil",
+            "value": 318.94969999999995
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.10962
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 57.55383300000001
+          },
+          {
+            "fuel": "electricity",
+            "value": 201.0996
+          },
+          {
+            "fuel": "gas",
+            "value": 670.5889999999999
+          },
+          {
+            "fuel": "oil",
+            "value": 2.5735
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 366.6305
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 268.04334800000015
+          },
+          {
+            "fuel": "electricity",
+            "value": 340.96320000000003
+          },
+          {
+            "fuel": "gas",
+            "value": 767.738
+          },
+          {
+            "fuel": "oil",
+            "value": 169.07539999999995
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 482.52736000000004
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "coal",
+            "value": 25.924979999999998
+          },
+          {
+            "fuel": "gas",
+            "value": 191.61200000000002
+          },
+          {
+            "fuel": "oil",
+            "value": 42.870000000000005
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.337995
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 1553.270839
+          },
+          {
+            "fuel": "transport",
+            "value": 669.2803899999999
+          },
+          {
+            "fuel": "buildings",
+            "value": 1298.4464329999998
+          },
+          {
+            "fuel": "others",
+            "value": 2028.3473080000003
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 260.744975
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 679.8851999999999
+          },
+          {
+            "fuel": "hydro",
+            "value": 47.3688
+          },
+          {
+            "fuel": "nuclear",
+            "value": 320.9472
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0036
+          },
+          {
+            "fuel": "thermal",
+            "value": 311.382
+          },
+          {
+            "fuel": "wind",
+            "value": 0.1835999999999999
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 291.1312429999998
+          },
+          {
+            "fuel": "electricity",
+            "value": -14.597999999999999
+          },
+          {
+            "fuel": "gas",
+            "value": 1375.8976
+          },
+          {
+            "fuel": "oil",
+            "value": 428.0918000000001
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -2.3895
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 4379.460047,
+        "tfc": 5810.089945,
+        "elec_gen": 1359.7703999999999,
+        "net_imports": 2078.133143,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 291.1312429999998
+          },
+          {
+            "fuel": "electricity",
+            "value": -14.597999999999999
+          },
+          {
+            "fuel": "gas",
+            "value": 1375.8976
+          },
+          {
+            "fuel": "oil",
+            "value": 428.0918000000001
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -2.3895
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_807",
+      "name": "North Macedonia",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 130.02205093600003
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 7.960697794
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 5.88163762
+          },
+          {
+            "fuel": "electricity",
+            "value": 7.3908
+          },
+          {
+            "fuel": "gas",
+            "value": 1.815
+          },
+          {
+            "fuel": "oil",
+            "value": 8.8000521
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.4067852009999997
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.144
+          },
+          {
+            "fuel": "gas",
+            "value": 0.09399999999999999
+          },
+          {
+            "fuel": "oil",
+            "value": 18.9098106
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.018216
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.176533767
+          },
+          {
+            "fuel": "electricity",
+            "value": 11.6388
+          },
+          {
+            "fuel": "oil",
+            "value": 1.8736476
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 9.009983495
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.6829571299999999
+          },
+          {
+            "fuel": "electricity",
+            "value": 24.8688
+          },
+          {
+            "fuel": "gas",
+            "value": 0.6829999999999999
+          },
+          {
+            "fuel": "geothermal",
+            "value": 0.467
+          },
+          {
+            "fuel": "oil",
+            "value": 14.184905999999998
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 10.951936579
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 1.4529486
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 24.294274921
+          },
+          {
+            "fuel": "transport",
+            "value": 19.1660266
+          },
+          {
+            "fuel": "buildings",
+            "value": 22.698964862
+          },
+          {
+            "fuel": "others",
+            "value": 51.838599709
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 1.4529486
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 26.136
+          },
+          {
+            "fuel": "hydro",
+            "value": 8.7516
+          },
+          {
+            "fuel": "thermal",
+            "value": 17.3844
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 9.088283195
+          },
+          {
+            "fuel": "electricity",
+            "value": 5.112
+          },
+          {
+            "fuel": "gas",
+            "value": 4.449
+          },
+          {
+            "fuel": "oil",
+            "value": 38.278761700000004
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.187404063
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 137.98274873000003,
+        "tfc": 119.450814692,
+        "elec_gen": 52.272,
+        "net_imports": 57.115448958,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 9.088283195
+          },
+          {
+            "fuel": "electricity",
+            "value": 5.112
+          },
+          {
+            "fuel": "gas",
+            "value": 4.449
+          },
+          {
+            "fuel": "oil",
+            "value": 38.278761700000004
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.187404063
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_818",
+      "name": "Egypt",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 0.97050024
+          },
+          {
+            "fuel": "gas",
+            "value": 4343.0599999999995
+          },
+          {
+            "fuel": "oil",
+            "value": 1196.244
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 196.06711514817502
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 6.568828
+          },
+          {
+            "fuel": "electricity",
+            "value": 293.0544
+          },
+          {
+            "fuel": "gas",
+            "value": 508.663
+          },
+          {
+            "fuel": "oil",
+            "value": 435.85360000000003
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 33.8150759
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "gas",
+            "value": 15.952
+          },
+          {
+            "fuel": "oil",
+            "value": 593.4742
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 286.308
+          },
+          {
+            "fuel": "gas",
+            "value": 39.821
+          },
+          {
+            "fuel": "oil",
+            "value": 209.9493
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 61.0715
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 463.3524
+          },
+          {
+            "fuel": "gas",
+            "value": 350.4848
+          },
+          {
+            "fuel": "oil",
+            "value": 520.6241
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 77.97903794999999
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "gas",
+            "value": 204.102
+          },
+          {
+            "fuel": "oil",
+            "value": 92.703
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 1277.9549039
+          },
+          {
+            "fuel": "transport",
+            "value": 609.4262
+          },
+          {
+            "fuel": "buildings",
+            "value": 597.1498
+          },
+          {
+            "fuel": "others",
+            "value": 1412.44033795
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 296.805
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 541.7496
+          },
+          {
+            "fuel": "hydro",
+            "value": 46.9656
+          },
+          {
+            "fuel": "solar",
+            "value": 0.7415999999999999
+          },
+          {
+            "fuel": "thermal",
+            "value": 488.6496
+          },
+          {
+            "fuel": "wind",
+            "value": 5.3928
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 44.5853194
+          },
+          {
+            "fuel": "electricity",
+            "value": -5.1948
+          },
+          {
+            "fuel": "gas",
+            "value": -493.038
+          },
+          {
+            "fuel": "oil",
+            "value": 1.491800000000012
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -0.734500002055
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 5736.341615388174,
+        "tfc": 4193.77624185,
+        "elec_gen": 1083.4992,
+        "net_imports": -452.890180602055,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 44.5853194
+          },
+          {
+            "fuel": "electricity",
+            "value": -5.1948
+          },
+          {
+            "fuel": "gas",
+            "value": -493.038
+          },
+          {
+            "fuel": "oil",
+            "value": 1.491800000000012
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": -0.734500002055
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_826",
+      "name": "United Kingdom",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 916.1642919999999
+          },
+          {
+            "fuel": "gas",
+            "value": 4781.13803
+          },
+          {
+            "fuel": "oil",
+            "value": 5035.112874
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 172.6280000011
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 156.11706499999997
+          },
+          {
+            "fuel": "electricity",
+            "value": 451.4292
+          },
+          {
+            "fuel": "gas",
+            "value": 451.186
+          },
+          {
+            "fuel": "oil",
+            "value": 390.79329999999993
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 88.78399999655
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "coal",
+            "value": 3.6031100000000005
+          },
+          {
+            "fuel": "electricity",
+            "value": 33.7284
+          },
+          {
+            "fuel": "gas",
+            "value": 24.599
+          },
+          {
+            "fuel": "oil",
+            "value": 1700.7585000000001
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 95.596
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 47.758633
+          },
+          {
+            "fuel": "electricity",
+            "value": 778.3344
+          },
+          {
+            "fuel": "gas",
+            "value": 1727.364
+          },
+          {
+            "fuel": "geothermal",
+            "value": 0.033
+          },
+          {
+            "fuel": "oil",
+            "value": 163.7018
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 39.09
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 170.39813699999996
+          },
+          {
+            "fuel": "electricity",
+            "value": 1085.1336000000001
+          },
+          {
+            "fuel": "gas",
+            "value": 2191.024288
+          },
+          {
+            "fuel": "geothermal",
+            "value": 0.033
+          },
+          {
+            "fuel": "oil",
+            "value": 485.66218399999997
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 129.322999998275
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "coal",
+            "value": 4.62
+          },
+          {
+            "fuel": "gas",
+            "value": 80.8
+          },
+          {
+            "fuel": "oil",
+            "value": 248.293
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 1538.3095649965499
+          },
+          {
+            "fuel": "transport",
+            "value": 1858.28501
+          },
+          {
+            "fuel": "buildings",
+            "value": 2756.281833
+          },
+          {
+            "fuel": "others",
+            "value": 4061.574208998275
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 333.713
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 1378.044
+          },
+          {
+            "fuel": "hydro",
+            "value": 24.2676
+          },
+          {
+            "fuel": "nuclear",
+            "value": 223.704
+          },
+          {
+            "fuel": "solar",
+            "value": 0.144
+          },
+          {
+            "fuel": "thermal",
+            "value": 1092.8916
+          },
+          {
+            "fuel": "tide",
+            "value": 0.0072
+          },
+          {
+            "fuel": "wind",
+            "value": 37.0296
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 1344.43462
+          },
+          {
+            "fuel": "electricity",
+            "value": 9.583199999999998
+          },
+          {
+            "fuel": "gas",
+            "value": 1523.3064040000002
+          },
+          {
+            "fuel": "oil",
+            "value": 512.8701889999998
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 65.27059999930499
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 10905.043196001101,
+        "tfc": 10548.163616994825,
+        "elec_gen": 2756.088,
+        "net_imports": 3455.4650129993047,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 1344.43462
+          },
+          {
+            "fuel": "electricity",
+            "value": 9.583199999999998
+          },
+          {
+            "fuel": "gas",
+            "value": 1523.3064040000002
+          },
+          {
+            "fuel": "oil",
+            "value": 512.8701889999998
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 65.27059999930499
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_831",
+      "name": "Guernsey",
+      "source": "UN",
+      "sectors": {
+        "01_production": [],
+        "14_industry_sector": [],
+        "15_transport_sector": [],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.3014000000000001
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.3014
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0
+          },
+          {
+            "fuel": "transport",
+            "value": 0
+          },
+          {
+            "fuel": "buildings",
+            "value": 1.3014000000000001
+          },
+          {
+            "fuel": "others",
+            "value": 1.3014
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.54792
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.54792
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": 0.86148
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0,
+        "tfc": 2.6028000000000002,
+        "elec_gen": 1.09584,
+        "net_imports": 0.86148,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": 0.86148
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_832",
+      "name": "Jersey",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.277
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.0484
+          },
+          {
+            "fuel": "oil",
+            "value": 1.3218239732
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 2.8158609
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.31112
+          },
+          {
+            "fuel": "oil",
+            "value": 1.589267
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.3353200000000003
+          },
+          {
+            "fuel": "oil",
+            "value": 2.3179039866
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 3.3702239732
+          },
+          {
+            "fuel": "transport",
+            "value": 2.8158609
+          },
+          {
+            "fuel": "buildings",
+            "value": 2.9003870000000003
+          },
+          {
+            "fuel": "others",
+            "value": 4.6532239866000005
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.20304
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.20304
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": 2.40804
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0.277,
+        "tfc": 13.739695859800001,
+        "elec_gen": 0.40608,
+        "net_imports": 2.40804,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": 2.40804
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_833",
+      "name": "Isle of Man",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.38
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.9863999999999998
+          }
+        ],
+        "15_transport_sector": [],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.8999999999999999
+          },
+          {
+            "fuel": "gas",
+            "value": 0.863
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.3932
+          },
+          {
+            "fuel": "gas",
+            "value": 0.863
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0.9863999999999998
+          },
+          {
+            "fuel": "transport",
+            "value": 0
+          },
+          {
+            "fuel": "buildings",
+            "value": 1.763
+          },
+          {
+            "fuel": "others",
+            "value": 2.2561999999999998
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 1.7924399999999998
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.0108
+          },
+          {
+            "fuel": "thermal",
+            "value": 1.78164
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": -0.22716000000000008
+          },
+          {
+            "fuel": "gas",
+            "value": 4.249
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0.38,
+        "tfc": 5.005599999999999,
+        "elec_gen": 3.5848799999999996,
+        "net_imports": 4.021839999999999,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": -0.22716000000000008
+          },
+          {
+            "fuel": "gas",
+            "value": 4.249
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_834",
+      "name": "United Republic of Tanzania",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 0.0
+          },
+          {
+            "fuel": "gas",
+            "value": 59.87846284
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 725.0074999964589
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 5.366399999999999
+          },
+          {
+            "fuel": "electricity",
+            "value": 7.4592
+          },
+          {
+            "fuel": "gas",
+            "value": 7.344
+          },
+          {
+            "fuel": "oil",
+            "value": 5.5752
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 97.82600000117
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 48.239999999999995
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 9.8352
+          },
+          {
+            "fuel": "oil",
+            "value": 10.0494
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 497.91750000346997
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 5.1084
+          },
+          {
+            "fuel": "electricity",
+            "value": 15.2784
+          },
+          {
+            "fuel": "gas",
+            "value": 4.644
+          },
+          {
+            "fuel": "oil",
+            "value": 13.525
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 625.7995000065699
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 1.3668
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 123.57080000117
+          },
+          {
+            "fuel": "transport",
+            "value": 48.239999999999995
+          },
+          {
+            "fuel": "buildings",
+            "value": 517.80210000347
+          },
+          {
+            "fuel": "others",
+            "value": 664.3553000065699
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 1.3668
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 19.1988
+          },
+          {
+            "fuel": "hydro",
+            "value": 9.7236
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0252
+          },
+          {
+            "fuel": "thermal",
+            "value": 9.45
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 5.1084
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.2052
+          },
+          {
+            "fuel": "oil",
+            "value": 69.9453
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 784.8859628364589,
+        "tfc": 1355.3350000112098,
+        "elec_gen": 38.3976,
+        "net_imports": 75.2589,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 5.1084
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.2052
+          },
+          {
+            "fuel": "oil",
+            "value": 69.9453
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_84",
+      "name": "Belize",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "gas",
+            "value": 0.546
+          },
+          {
+            "fuel": "oil",
+            "value": 9.290999997
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 3.3217551908200003
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.8063059967999998
+          },
+          {
+            "fuel": "oil",
+            "value": 3.3535200164
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 1.467199
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 4.8777060188
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.3677739992
+          },
+          {
+            "fuel": "oil",
+            "value": 0.6530000233999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.608849993
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.8102759975999998
+          },
+          {
+            "fuel": "gas",
+            "value": 0.2269999882
+          },
+          {
+            "fuel": "oil",
+            "value": 2.3297600316000002
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 1.3424494930000002
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.1005
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 5.6270250132
+          },
+          {
+            "fuel": "transport",
+            "value": 4.8777060188
+          },
+          {
+            "fuel": "buildings",
+            "value": 2.6296240155999997
+          },
+          {
+            "fuel": "others",
+            "value": 5.7094855104
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.1005
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 1.493746002
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.946746
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.547000002
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": 0.5755780008
+          },
+          {
+            "fuel": "oil",
+            "value": -1.3054939639999992
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 13.15875518782,
+        "tfc": 18.944340558,
+        "elec_gen": 2.987492004,
+        "net_imports": -0.7299159631999992,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": 0.5755780008
+          },
+          {
+            "fuel": "oil",
+            "value": -1.3054939639999992
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_850",
+      "name": "United States Virgin Islands",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.028564199999999998
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.5757064
+          }
+        ],
+        "15_transport_sector": [],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.6017552
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.022058139999999903
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.8896084
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.022058139999999903
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 2.5757064
+          },
+          {
+            "fuel": "transport",
+            "value": 0
+          },
+          {
+            "fuel": "buildings",
+            "value": 1.6238133399999999
+          },
+          {
+            "fuel": "others",
+            "value": 2.91166654
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 3.14334
+          },
+          {
+            "fuel": "thermal",
+            "value": 3.14334
+          }
+        ],
+        "net_imports": []
+      },
+      "metrics": {
+        "tpes": 0.028564199999999998,
+        "tfc": 7.11118628,
+        "elec_gen": 6.28668,
+        "net_imports": 0,
+        "net_imports_by_fuel": []
+      }
+    },
+    {
+      "economy": "UN_854",
+      "name": "Burkina Faso",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 130.5262906
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 2.4089652
+          },
+          {
+            "fuel": "oil",
+            "value": 1.1658
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.9343741
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 16.575300000000002
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 1.0428696
+          },
+          {
+            "fuel": "oil",
+            "value": 2.1868618
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 98.579237
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 4.2491016
+          },
+          {
+            "fuel": "oil",
+            "value": 3.2002618
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 99.5136111
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.03819
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 4.5091393
+          },
+          {
+            "fuel": "transport",
+            "value": 16.575300000000002
+          },
+          {
+            "fuel": "buildings",
+            "value": 101.80896840000001
+          },
+          {
+            "fuel": "others",
+            "value": 106.9629745
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.03819
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 2.4163704
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.423144
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0018432
+          },
+          {
+            "fuel": "thermal",
+            "value": 1.9913832
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "electricity",
+            "value": 1.7827559999999998
+          },
+          {
+            "fuel": "oil",
+            "value": 24.930617000000005
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 130.5262906,
+        "tfc": 229.89457220000003,
+        "elec_gen": 4.8327408,
+        "net_imports": 26.713373000000004,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "electricity",
+            "value": 1.7827559999999998
+          },
+          {
+            "fuel": "oil",
+            "value": 24.930617000000005
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_858",
+      "name": "Uruguay",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 57.94677590000001
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.022776192
+          },
+          {
+            "fuel": "electricity",
+            "value": 18.21456
+          },
+          {
+            "fuel": "gas",
+            "value": 1.2361
+          },
+          {
+            "fuel": "oil",
+            "value": 12.517949999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 50.794474739999984
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 43.68198000000001
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.5607999999999997
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 22.212
+          },
+          {
+            "fuel": "gas",
+            "value": 1.542
+          },
+          {
+            "fuel": "oil",
+            "value": 7.189
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 15.203556999999998
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 0.011388096
+          },
+          {
+            "fuel": "electricity",
+            "value": 32.346360000000004
+          },
+          {
+            "fuel": "gas",
+            "value": 2.137
+          },
+          {
+            "fuel": "oil",
+            "value": 21.96606
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 53.86152423999999
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "coal",
+            "value": 0.1008144
+          },
+          {
+            "fuel": "oil",
+            "value": 2.6799899999999997
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 82.78586093199998
+          },
+          {
+            "fuel": "transport",
+            "value": 44.24278000000001
+          },
+          {
+            "fuel": "buildings",
+            "value": 46.146557
+          },
+          {
+            "fuel": "others",
+            "value": 110.32233233599999
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 2.7808043999999996
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 38.635200000000005
+          },
+          {
+            "fuel": "hydro",
+            "value": 30.26592
+          },
+          {
+            "fuel": "thermal",
+            "value": 8.11764
+          },
+          {
+            "fuel": "wind",
+            "value": 0.25164
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 0.112202496
+          },
+          {
+            "fuel": "electricity",
+            "value": -1.1671200000000002
+          },
+          {
+            "fuel": "gas",
+            "value": 3.0176
+          },
+          {
+            "fuel": "oil",
+            "value": 105.62152999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.059
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 57.94677590000001,
+        "tfc": 286.27833466799996,
+        "elec_gen": 77.27040000000001,
+        "net_imports": 107.64321249599999,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 0.112202496
+          },
+          {
+            "fuel": "electricity",
+            "value": -1.1671200000000002
+          },
+          {
+            "fuel": "gas",
+            "value": 3.0176
+          },
+          {
+            "fuel": "oil",
+            "value": 105.62152999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.059
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_860",
+      "name": "Uzbekistan",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 97.549775
+          },
+          {
+            "fuel": "gas",
+            "value": 4555.0160000000005
+          },
+          {
+            "fuel": "oil",
+            "value": 92.01717
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.20097
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 15.169646
+          },
+          {
+            "fuel": "electricity",
+            "value": 123.35399999999998
+          },
+          {
+            "fuel": "gas",
+            "value": 471.092
+          },
+          {
+            "fuel": "oil",
+            "value": 9.1048
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 9.514800000000001
+          },
+          {
+            "fuel": "gas",
+            "value": 101.244
+          },
+          {
+            "fuel": "oil",
+            "value": 73.83094999999999
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "coal",
+            "value": 1.1949299999999998
+          },
+          {
+            "fuel": "electricity",
+            "value": 39.8664
+          },
+          {
+            "fuel": "gas",
+            "value": 639.805
+          },
+          {
+            "fuel": "oil",
+            "value": 10.8904
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 48.610753
+          },
+          {
+            "fuel": "electricity",
+            "value": 148.9968
+          },
+          {
+            "fuel": "gas",
+            "value": 881.05
+          },
+          {
+            "fuel": "oil",
+            "value": 55.74309999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 189.26394
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "gas",
+            "value": 59.266
+          },
+          {
+            "fuel": "oil",
+            "value": 17.0988
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 618.7204459999999
+          },
+          {
+            "fuel": "transport",
+            "value": 184.58974999999998
+          },
+          {
+            "fuel": "buildings",
+            "value": 691.75673
+          },
+          {
+            "fuel": "others",
+            "value": 1323.664593
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 76.3648
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 186.12
+          },
+          {
+            "fuel": "hydro",
+            "value": 39.0456
+          },
+          {
+            "fuel": "thermal",
+            "value": 147.0744
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 2.203982
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.31680000000000064
+          },
+          {
+            "fuel": "gas",
+            "value": -545.602
+          },
+          {
+            "fuel": "oil",
+            "value": -10.1633
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 4744.783915000001,
+        "tfc": 2895.0963189999998,
+        "elec_gen": 372.24,
+        "net_imports": -553.244518,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 2.203982
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.31680000000000064
+          },
+          {
+            "fuel": "gas",
+            "value": -545.602
+          },
+          {
+            "fuel": "oil",
+            "value": -10.1633
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_862",
+      "name": "Venezuela",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 153.87372
+          },
+          {
+            "fuel": "gas",
+            "value": 3764.6468070000005
+          },
+          {
+            "fuel": "oil",
+            "value": 6527.4822
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 49.336579492365004
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 15.387372000000001
+          },
+          {
+            "fuel": "electricity",
+            "value": 200.40479999999997
+          },
+          {
+            "fuel": "gas",
+            "value": 442.21299999999997
+          },
+          {
+            "fuel": "oil",
+            "value": 453.8504
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 49.146158979679996
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.99
+          },
+          {
+            "fuel": "gas",
+            "value": 0.74
+          },
+          {
+            "fuel": "oil",
+            "value": 653.9428999999999
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 158.832
+          },
+          {
+            "fuel": "gas",
+            "value": 57.754999999999995
+          },
+          {
+            "fuel": "oil",
+            "value": 53.3329
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 14.475499994924999
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 15.387372000000001
+          },
+          {
+            "fuel": "electricity",
+            "value": 263.9448
+          },
+          {
+            "fuel": "gas",
+            "value": 354.8546
+          },
+          {
+            "fuel": "oil",
+            "value": 281.3893
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 48.827579484765
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "gas",
+            "value": 0.0464
+          },
+          {
+            "fuel": "oil",
+            "value": 89.2494
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 1161.00173097968
+          },
+          {
+            "fuel": "transport",
+            "value": 655.6728999999999
+          },
+          {
+            "fuel": "buildings",
+            "value": 284.395399994925
+          },
+          {
+            "fuel": "others",
+            "value": 964.403651484765
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 89.2958
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 409.5612
+          },
+          {
+            "fuel": "hydro",
+            "value": 276.408
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0072
+          },
+          {
+            "fuel": "thermal",
+            "value": 133.146
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": -138.486348
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.0
+          },
+          {
+            "fuel": "gas",
+            "value": 77.946
+          },
+          {
+            "fuel": "oil",
+            "value": -5093.105600000001
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 10495.339306492366,
+        "tfc": 3154.76948245937,
+        "elec_gen": 819.1224,
+        "net_imports": -5153.645948000001,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": -138.486348
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.0
+          },
+          {
+            "fuel": "gas",
+            "value": 77.946
+          },
+          {
+            "fuel": "oil",
+            "value": -5093.105600000001
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_876",
+      "name": "Wallis and Futuna Islands",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.00794745
+          }
+        ],
+        "14_industry_sector": [],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 0.119783
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.03528
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.00794745
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.08229600000000001
+          },
+          {
+            "fuel": "oil",
+            "value": 0.11479279999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.00794745
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0
+          },
+          {
+            "fuel": "transport",
+            "value": 0.119783
+          },
+          {
+            "fuel": "buildings",
+            "value": 0.04322745
+          },
+          {
+            "fuel": "others",
+            "value": 0.20503625
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.071352
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.000864
+          },
+          {
+            "fuel": "solar",
+            "value": 0.00036
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.070128
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 0.401321
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0.00794745,
+        "tfc": 0.3680467,
+        "elec_gen": 0.142704,
+        "net_imports": 0.401321,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 0.401321
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_882",
+      "name": "Samoa",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 1.3992719999999998
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.034776
+          },
+          {
+            "fuel": "oil",
+            "value": 0.523933844
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 1.5017433813
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0001569999999999
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.3127356
+          },
+          {
+            "fuel": "oil",
+            "value": 0.10073409059999991
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 1.195234
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.3877236
+          },
+          {
+            "fuel": "oil",
+            "value": 0.4160674181700609
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 1.3752339999999998
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.02211
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0.558709844
+          },
+          {
+            "fuel": "transport",
+            "value": 1.5019003813
+          },
+          {
+            "fuel": "buildings",
+            "value": 1.6087036905999998
+          },
+          {
+            "fuel": "others",
+            "value": 2.179025018170061
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.02211
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.4009104
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.1718568
+          },
+          {
+            "fuel": "solar",
+            "value": 4.68e-05
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.2290067999999999
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 3.189234207617712
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.000767
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 1.3992719999999998,
+        "tfc": 5.870448934070061,
+        "elec_gen": 0.8018207999999999,
+        "net_imports": 3.190001207617712,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 3.189234207617712
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.000767
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_887",
+      "name": "Yemen",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "gas",
+            "value": 500.424
+          },
+          {
+            "fuel": "oil",
+            "value": 535.8987
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 5.955000003049999
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 8.772
+          },
+          {
+            "fuel": "electricity",
+            "value": 0.3888
+          },
+          {
+            "fuel": "oil",
+            "value": 69.978
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 100.2562
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 15.9048
+          },
+          {
+            "fuel": "oil",
+            "value": 49.0798
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 8.772
+          },
+          {
+            "fuel": "electricity",
+            "value": 20.174400000000002
+          },
+          {
+            "fuel": "gas",
+            "value": 29.614000000000004
+          },
+          {
+            "fuel": "oil",
+            "value": 94.6038
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 3.304
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 3.9396
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 79.13879999999999
+          },
+          {
+            "fuel": "transport",
+            "value": 100.2562
+          },
+          {
+            "fuel": "buildings",
+            "value": 64.9846
+          },
+          {
+            "fuel": "others",
+            "value": 156.46820000000002
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 3.9396
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 27.9252
+          },
+          {
+            "fuel": "solar",
+            "value": 0.0072
+          },
+          {
+            "fuel": "thermal",
+            "value": 27.918
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 8.772
+          },
+          {
+            "fuel": "gas",
+            "value": -212.118
+          },
+          {
+            "fuel": "oil",
+            "value": -271.4427
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 1042.2777000030499,
+        "tfc": 404.78740000000005,
+        "elec_gen": 55.8504,
+        "net_imports": -474.7887,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 8.772
+          },
+          {
+            "fuel": "gas",
+            "value": -212.118
+          },
+          {
+            "fuel": "oil",
+            "value": -271.4427
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_894",
+      "name": "Zambia",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "coal",
+            "value": 0.0
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 294.34699999571495
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "coal",
+            "value": 8.637136
+          },
+          {
+            "fuel": "electricity",
+            "value": 16.218
+          },
+          {
+            "fuel": "oil",
+            "value": 10.1157
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 60.011999995390006
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.0756
+          },
+          {
+            "fuel": "oil",
+            "value": 17.4277
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 12.0564
+          },
+          {
+            "fuel": "oil",
+            "value": 1.2525
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 167.8979999991
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "coal",
+            "value": 4.318568
+          },
+          {
+            "fuel": "electricity",
+            "value": 28.4652
+          },
+          {
+            "fuel": "oil",
+            "value": 13.024899999999999
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 198.847999996795
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 2.2512
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 94.98283599539
+          },
+          {
+            "fuel": "transport",
+            "value": 17.503300000000003
+          },
+          {
+            "fuel": "buildings",
+            "value": 181.2068999991
+          },
+          {
+            "fuel": "others",
+            "value": 244.65666799679502
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 2.2512
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 37.6128
+          },
+          {
+            "fuel": "hydro",
+            "value": 37.566
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.0468
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "coal",
+            "value": 4.304468
+          },
+          {
+            "fuel": "electricity",
+            "value": -2.034
+          },
+          {
+            "fuel": "oil",
+            "value": 35.5584
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 294.34699999571495,
+        "tfc": 540.600903991285,
+        "elec_gen": 75.2256,
+        "net_imports": 37.828868,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "coal",
+            "value": 4.304468
+          },
+          {
+            "fuel": "electricity",
+            "value": -2.034
+          },
+          {
+            "fuel": "oil",
+            "value": 35.5584
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_90",
+      "name": "Solomon Islands",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 3.2565195
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.1255319999999998
+          },
+          {
+            "fuel": "oil",
+            "value": 0.504304
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 3.1371317999999997
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.1731599999999999
+          },
+          {
+            "fuel": "oil",
+            "value": 0.0202444
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 3.1582115
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.33874199999999977
+          },
+          {
+            "fuel": "oil",
+            "value": 0.4603064
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 3.1582115
+          }
+        ],
+        "17_nonenergy_use": [
+          {
+            "fuel": "oil",
+            "value": 0.067134
+          }
+        ],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0.6298359999999998
+          },
+          {
+            "fuel": "transport",
+            "value": 3.1371317999999997
+          },
+          {
+            "fuel": "buildings",
+            "value": 3.3516159
+          },
+          {
+            "fuel": "others",
+            "value": 3.9572599
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0.067134
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.326934
+          },
+          {
+            "fuel": "hydro",
+            "value": 0.0017135999999999
+          },
+          {
+            "fuel": "solar",
+            "value": 1.44e-05
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.325206
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 5.2077444999999996
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 3.2565195,
+        "tfc": 11.1429776,
+        "elec_gen": 0.6538679999999999,
+        "net_imports": 5.2077444999999996,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 5.2077444999999996
+          }
+        ]
+      }
+    },
+    {
+      "economy": "UN_92",
+      "name": "British Virgin Islands",
+      "source": "UN",
+      "sectors": {
+        "01_production": [
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.014282099999999999
+          }
+        ],
+        "14_industry_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.1008
+          }
+        ],
+        "15_transport_sector": [
+          {
+            "fuel": "oil",
+            "value": 1.04525
+          }
+        ],
+        "16_buildings_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.5736708
+          },
+          {
+            "fuel": "oil",
+            "value": 0.10074
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0120975699999999
+          }
+        ],
+        "16_other_sector": [
+          {
+            "fuel": "electricity",
+            "value": 0.6240708
+          },
+          {
+            "fuel": "oil",
+            "value": 0.10074
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0120975699999999
+          }
+        ],
+        "17_nonenergy_use": [],
+        "12_total_final_consumption": [
+          {
+            "fuel": "industry",
+            "value": 0.1008
+          },
+          {
+            "fuel": "transport",
+            "value": 1.04525
+          },
+          {
+            "fuel": "buildings",
+            "value": 0.68650837
+          },
+          {
+            "fuel": "others",
+            "value": 0.73690837
+          },
+          {
+            "fuel": "non_energy_use",
+            "value": 0
+          }
+        ],
+        "18_electricity_output_in_gwh": [
+          {
+            "fuel": "electricity",
+            "value": 0.7101107999999999
+          },
+          {
+            "fuel": "solar",
+            "value": 1.08e-05
+          },
+          {
+            "fuel": "thermal",
+            "value": 0.7059599999999999
+          },
+          {
+            "fuel": "wind",
+            "value": 0.00414
+          }
+        ],
+        "net_imports": [
+          {
+            "fuel": "oil",
+            "value": 2.9751399999999997
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0012685
+          }
+        ]
+      },
+      "metrics": {
+        "tpes": 0.014282099999999999,
+        "tfc": 2.56946674,
+        "elec_gen": 1.4202215999999999,
+        "net_imports": 2.9764085,
+        "net_imports_by_fuel": [
+          {
+            "fuel": "oil",
+            "value": 2.9751399999999997
+          },
+          {
+            "fuel": "renewables_and_others",
+            "value": 0.0012685
+          }
+        ]
+      }
+    }
+  ]
+}

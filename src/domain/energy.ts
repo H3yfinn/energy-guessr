@@ -15,7 +15,15 @@ export interface EnergyProfile {
   economy: string;
   name: string;
   chartImage?: string;
+  source?: string;
   sectors: Record<SectorKey, FuelValue[]>;
+  metrics?: {
+    tpes?: number;
+    tfc?: number;
+    elec_gen?: number;
+    net_imports?: number;
+    net_imports_by_fuel?: FuelValue[];
+  };
 }
 
 export interface EnergyDataset {
@@ -37,7 +45,7 @@ export interface EnergyGuess {
   proximity: number;
   total: number;
   totalProximity: number;
-  tpes: number;
+  production: number;
   tfc: number;
   elecGen: number;
   netImports: number;
@@ -136,6 +144,20 @@ export function sanitizeEconomyName(value: string): string {
     .toLowerCase();
 }
 
+// Alias map for matching guesses without adding extra economies
+export const NAME_ALIASES: Record<string, string | string[]> = {
+  taiwan: ["chinesetaipei", "taiwan"],
+  southkorea: ["republicofkorea", "korea"],
+  republicofkorea: ["republicofkorea", "korea"],
+  korea: ["republicofkorea", "korea"],
+  unitedstates: ["unitedstates", "usa", "us"],
+  usa: "unitedstates",
+  us: "unitedstates",
+  hongkong: ["hongkongchina", "hongkong"],
+  hk: ["hongkongchina", "hongkong"],
+  russia: ["russia", "russianfederation"],
+};
+
 function valueForFuel(
   sector: Record<SectorKey, FuelValue[]>,
   sectorKey: SectorKey,
@@ -233,12 +255,28 @@ export function sectorTotal(profile: EnergyProfile, key: string): number {
 }
 
 export function netImports(profile: EnergyProfile): number {
+  // Prefer precomputed metrics
+  if (profile.metrics && typeof profile.metrics.net_imports === "number") {
+    return profile.metrics.net_imports;
+  }
   const imports = sectorTotal(profile, "02_imports");
   const exports = sectorTotal(profile, "03_exports");
+  if (imports === 0 && exports === 0) {
+    // fall back to net_imports sector if present
+    const netSector = sectorTotal(profile, "net_imports");
+    if (netSector !== 0) return netSector;
+  }
   return imports - Math.abs(exports);
 }
 
 export function netImportsByFuel(profile: EnergyProfile): FuelValue[] {
+  if (
+    profile.metrics &&
+    Array.isArray(profile.metrics.net_imports_by_fuel) &&
+    profile.metrics.net_imports_by_fuel.length > 0
+  ) {
+    return profile.metrics.net_imports_by_fuel;
+  }
   const imports = profile.sectors["02_imports"] ?? [];
   const exports = profile.sectors["03_exports"] ?? [];
 
@@ -277,10 +315,18 @@ export function findProfile(
   dataset: EnergyDataset,
   guessName: string
 ): EnergyProfile | undefined {
-  const sanitizedGuess = sanitizeEconomyName(guessName);
-  return dataset.profiles.find(
-    (profile) => sanitizeEconomyName(profile.name) === sanitizedGuess
+  const rawGuess = sanitizeEconomyName(guessName);
+  const alias = NAME_ALIASES[rawGuess];
+  const candidates = Array.from(
+    new Set<string>([
+      rawGuess,
+      ...(Array.isArray(alias) ? alias : alias ? [alias] : []),
+    ])
   );
+  return dataset.profiles.find((profile) => {
+    const name = sanitizeEconomyName(profile.name);
+    return candidates.includes(name);
+  });
 }
 
 export function getSampleDataset(): EnergyDataset {
