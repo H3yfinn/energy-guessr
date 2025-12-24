@@ -752,11 +752,14 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
       </div>
       {datasetMode === "apec" && (
         <div className="text-xs text-gray-600 dark:text-gray-300 mt-3">
-          <strong>APEC economies:</strong>{" "}
-          Australia, Brunei Darussalam, Canada, Chile, China, Hong Kong (China),
-          Indonesia, Japan, Republic of Korea, Malaysia, Mexico, New Zealand, Papua New
-          Guinea, Peru, Philippines, Russian Federation, Singapore, Chinese Taipei,
-          Thailand, United States, Viet Nam.
+          <strong>APEC economies:</strong>
+          <span>
+            {" "}
+            Australia, Brunei Darussalam, Canada, Chile, China, Hong Kong (China),
+            Indonesia, Japan, Republic of Korea, Malaysia, Mexico, New Zealand, Papua New
+            Guinea, Peru, Philippines, Russian Federation, Singapore, Chinese Taipei,
+            Thailand, United States, Viet Nam.
+          </span>
         </div>
       )}
       <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
