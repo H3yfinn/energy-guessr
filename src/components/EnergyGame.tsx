@@ -49,6 +49,13 @@ const ALIAS_LABELS: Record<string, string> = {
 const APEC_ECONOMIES_TEXT =
   "Australia, Brunei Darussalam, Canada, Chile, China, Hong Kong (China), Indonesia, Japan, Republic of Korea, Malaysia, Mexico, New Zealand, Papua New Guinea, Peru, Philippines, Russian Federation, Singapore, Chinese Taipei, Thailand, United States, Viet Nam.";
 
+type FuelMeta = {
+  key: string;
+  color: string;
+  order: number;
+  hide_in_elec_gen?: boolean;
+};
+
 function prettyName(name: string): string {
   if (name === name.toUpperCase()) {
     return name
@@ -59,14 +66,6 @@ function prettyName(name: string): string {
   }
   return name;
 }
-type FuelMeta = {
-  key: string;
-  color: string;
-  order: number;
-  hide_in_elec_gen?: boolean;
-};
-const fuelMeta: FuelMeta[] = chartMeta.fuels as FuelMeta[];
-
 function getDayString() {
   return DateTime.now().toFormat("yyyy-MM-dd");
 }
