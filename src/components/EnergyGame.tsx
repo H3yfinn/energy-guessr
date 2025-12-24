@@ -625,8 +625,14 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
         compact={datasetMode === "apec"}
       />
       {showInstructions && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-slate-800 rounded shadow-lg max-w-lg w-full p-4 border dark:border-slate-700">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50"
+          onClick={() => setShowInstructions(false)}
+        >
+          <div
+            className="bg-white dark:bg-slate-800 rounded shadow-lg max-w-lg w-full p-4 border dark:border-slate-700"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-lg font-semibold">How to play</h3>
               <button
@@ -662,8 +668,14 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
         </div>
       )}
       {showGlossary && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-slate-800 rounded shadow-lg max-w-lg w-full p-4 border dark:border-slate-700">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50"
+          onClick={() => setShowGlossary(false)}
+        >
+          <div
+            className="bg-white dark:bg-slate-800 rounded shadow-lg max-w-lg w-full p-4 border dark:border-slate-700"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-between items-start mb-2">
               <h3 className="text-lg font-semibold">Glossary</h3>
               <button
