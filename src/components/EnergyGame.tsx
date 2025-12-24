@@ -555,6 +555,7 @@ export function EnergyGame({ settingsData }: EnergyGameProps) {
             type="button"
             onClick={() => {
               resetGuesses();
+              setWrongTiles(new Set());
               const randomSeed = dayString + "-" + Date.now();
               const next = chooseProfile(dataset, randomSeed);
               setTargetProfile(next);
