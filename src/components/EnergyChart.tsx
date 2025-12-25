@@ -243,7 +243,9 @@ export function EnergyChart({
                                   backgroundColor: color,
                                 }
                           }
-                          title={`${item.fuel}: ${formatEnergy(numericValue)}`}
+                          title={`${formatFuelLabel(item.fuel)}: ${formatEnergy(
+                            numericValue
+                          )}`}
                         />
                         <p
                           className="text-[10px] mt-0 text-center text-gray-700 dark:text-gray-200 break-words leading-tight"
