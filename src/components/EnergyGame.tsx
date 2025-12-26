@@ -703,8 +703,8 @@ export function EnergyGame({ settingsData, onTitleChange }: EnergyGameProps) {
               </li>
               <li>
                 <strong>Electricity generation</strong>: Shows generation output. World uses
-                Energy Institute data. Ren. &amp; Others covers other renewable sources (e.g.,
-                biomass) as well as other sources such as non-specified.
+                Energy Institute data. Others includes additional renewables (e.g., biomass),
+                non-specified sources and other sources.
               </li>
               <li>
                 <strong>Units</strong>: All values have been converted to PJ/EJ for better

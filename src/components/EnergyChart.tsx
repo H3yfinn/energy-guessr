@@ -25,7 +25,7 @@ const FUEL_ORDER = fuelMeta.reduce<Record<string, number>>((acc, f) => {
 }, {});
 
 function formatFuelLabel(fuel: string): string {
-  if (fuel === "renewables_and_others") return "Ren. & Others";
+  if (fuel === "renewables_and_others") return "Others";
   if (fuel === "wind_solar") return "Wind & Solar";
   const normalized = fuel.replace(/_and_/g, " & ").replace(/_/g, " ");
   const parts = normalized.split(" ").filter(Boolean);
