@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import chartMeta from "../config/chartMeta.json";
 import { EnergyProfile, SectorKey, formatEnergy } from "../domain/energy";
 import { computeCardSizing } from "../utils/cardSizing";
@@ -24,8 +24,20 @@ const FUEL_ORDER = fuelMeta.reduce<Record<string, number>>((acc, f) => {
   return acc;
 }, {});
 
-function formatFuelLabel(fuel: string): string {
-  if (fuel === "renewables_and_others") return "Others";
+type FuelLabelOptions = {
+  sectorKey?: string;
+  useLongOthers?: boolean;
+};
+
+function formatFuelLabel(fuel: string, options?: FuelLabelOptions): string {
+  if (fuel === "renewables_and_others") {
+    const isProduction = options?.sectorKey === "01_production";
+    const isElectricity = options?.sectorKey === "18_electricity_output_in_gwh";
+    if (options?.useLongOthers && (isProduction || isElectricity)) {
+      return "Renewables & Others";
+    }
+    return "Others";
+  }
   if (fuel === "wind_solar") return "Wind & Solar";
   const normalized = fuel.replace(/_and_/g, " & ").replace(/_/g, " ");
   const parts = normalized.split(" ").filter(Boolean);
@@ -63,6 +75,7 @@ export function EnergyChart({
   theme,
 }: EnergyChartProps) {
   const [showImage, setShowImage] = useState(true);
+  const [useLongOthers, setUseLongOthers] = useState(false);
   const fuelColors = theme === "dark" ? FUEL_COLORS_DARK : FUEL_COLORS_LIGHT;
   const chartSectors = (
     sectors.length > 0 ? sectors : (Object.keys(profile.sectors) as SectorKey[])
@@ -93,6 +106,19 @@ export function EnergyChart({
 
   const elecLabel = useMemo(() => {
     return "Electricity generation (2023)";
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return;
+    const mediaQuery = window.matchMedia("(min-width: 1366px)");
+    const handleChange = (event: MediaQueryListEvent | MediaQueryList) => {
+      setUseLongOthers(event.matches);
+    };
+    handleChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
   }, []);
 
   const chartSpan = 70; // percentage span for bars, leaves headroom
@@ -243,9 +269,10 @@ export function EnergyChart({
                                   backgroundColor: color,
                                 }
                           }
-                          title={`${formatFuelLabel(item.fuel)}: ${formatEnergy(
-                            numericValue
-                          )}`}
+                          title={`${formatFuelLabel(item.fuel, {
+                            sectorKey,
+                            useLongOthers,
+                          })}: ${formatEnergy(numericValue)}`}
                         />
                         <p
                           className="text-[10px] mt-0 text-center text-gray-700 dark:text-gray-200 break-words leading-tight"
@@ -255,7 +282,10 @@ export function EnergyChart({
                             overflowWrap: "anywhere",
                           }}
                         >
-                          {formatFuelLabel(item.fuel)}
+                          {formatFuelLabel(item.fuel, {
+                            sectorKey,
+                            useLongOthers,
+                          })}
                         </p>
                       </div>
                     );

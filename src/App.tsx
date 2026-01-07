@@ -27,7 +27,7 @@ function App() {
         bodyClassName="font-bold text-center"
       />
       <div className="flex justify-center flex-auto dark:bg-slate-900 dark:text-slate-50 min-h-screen">
-        <div className="w-full max-w-7xl flex flex-col p-4">
+        <div className="app-shell flex flex-col p-4">
           <header className="border-b-2 border-gray-200 flex items-start justify-between pb-3">
             <div>
               <h1 className="text-4xl font-bold tracking-wide">{pageTitle}</h1>
